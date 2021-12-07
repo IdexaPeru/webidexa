@@ -1,4 +1,9 @@
 import { ReactComponent as IconFB } from '../assets/redes/fb.svg';
+import { ReactComponent as IconWP } from '../assets/redes/wp.svg';
+import { ReactComponent as IconEmail } from '../assets/redes/email.svg';
+import { ReactComponent as IconIG } from '../assets/redes/ig.svg';
+import { ReactComponent as IconYT } from '../assets/redes/yt.svg';
+import { IconPhone } from './Icons';
 
 const Footer = () => {
   return (
@@ -6,8 +11,8 @@ const Footer = () => {
       <div className='max-w-7xl px-10 mx-auto grid grid-cols-1 footer '>
         <div className='w-full px-5  '>
           <div className='px-5 pb-5 mx-auto w-48  '>
-            <span className='text-purple_normal font-medium'>SOBRE IDEXAPERU</span>
-            <p className='text-blue_primary leading-5 w-52'>
+            <span className='text-purple_normal font-medium '>SOBRE IDEXAPERU</span>
+            <p className='text-blue_primary  w-52 pt-3'>
               Somos una empresa totalmente digital, nos dedicamos a dar solución a tus problemas informáticos
             </p>
           </div>
@@ -21,11 +26,11 @@ const Footer = () => {
                 <a href='facebook.com'>facebook</a>
               </li>
               <li className='flex items-center gap-2 text-blue_primary'>
-                <span ><IconFB /></span>
+                <span ><IconIG /></span>
                 <a href='facebook.com'>instagram</a>
               </li>
               <li className='flex items-center gap-2 text-blue_primary'>
-                <span ><IconFB /></span>
+                <span ><IconYT /></span>
                 <a href='facebook.com'>youtube</a>
               </li>
             </ul>
@@ -33,19 +38,19 @@ const Footer = () => {
         </div>
         <div className='w-full px-5 ' >
           <div className='px-5 pb-5 mx-auto w-48  '>
-            <span className='text-purple_normal font-medium'>REDES SOCIALES</span>
+            <span className='text-purple_normal font-medium'>CONTÁCTENOS</span>
             <ul className='flex flex-col gap-3 pt-4'>
               <li className='flex items-center gap-2 text-blue_primary'>
-                <span ><IconFB /></span>
-                <a href='facebook.com'>facebook</a>
+                <span ><IconEmail /></span>
+                <a href='facebook.com'>idexaperu@gmail.com</a>
+              </li>
+              <li className='flex items-center gap-2 text-blue_primary -ml-1'>
+                <span ><IconPhone /></span>
+                <a href='facebook.com'>939 616 350</a>
               </li>
               <li className='flex items-center gap-2 text-blue_primary'>
-                <span ><IconFB /></span>
-                <a href='facebook.com'>instagram</a>
-              </li>
-              <li className='flex items-center gap-2 text-blue_primary'>
-                <span ><IconFB /></span>
-                <a href='facebook.com'>youtube</a>
+                <span ><IconWP /></span>
+                <a href='facebook.com'>939 616 350</a>
               </li>
             </ul>
           </div>

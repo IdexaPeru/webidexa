@@ -5,7 +5,7 @@ const Inicio = () => {
     <section className='max-w-7xl px-10 mx-auto flex altoinicio items-center'>
       <div className=' w-full'>
         <div className=' w-80 mx-auto md:mx-0  sm:w-96 md:w-1/2'>
-          <h2 className='text-2xl md:text-4xl font-poppins font-bold '><span className='text-blue_primary'>Servicio</span> <br /> y asesoramiento <br /> <span className='text-blue_primary'>informático</span> , en idexa <br /> desarrollamos tus ideas</h2>
+          <h2 className='text-2xl sm:text-3xl lg:text-4xl font-poppins font-bold '><span className='text-blue_primary'>Servicio</span> <br /> y asesoramiento <br /> <span className='text-blue_primary'>informático</span> , en idexa <br /> desarrollamos tus ideas</h2>
           <p className='text-lg text-gray-500 pr-16 '>Disponemos de un equipo especializado en tecnologías de la información </p>
         </div>
         <div className='flex flex-col gap-5  items-center text-xl mt-10 sm:flex-row sm:justify-center md:w-1/2 md:justify-start '>

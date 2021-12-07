@@ -1,14 +1,13 @@
-import service1 from '../../assets/servicios/serv1.svg'
 import service2 from '../../assets/servicios/serv2.svg'
 import service3 from '../../assets/servicios/serv3.svg'
 import service4 from '../../assets/servicios/serv4.svg'
 import service5 from '../../assets/servicios/serv5.svg'
 import service6 from '../../assets/servicios/serv6.svg'
-
+import { FaPaintBrush } from 'react-icons/fa'
 
 const Servicios = () => {
   return (
-    <section className='w-full bg-blue_cero border-blue_normal'>
+    <section id="section-02" className='w-full bg-blue_cero border-blue_normal'>
       <div className='max-w-7xl px-10 mx-auto  pb-10'>
         <h3 className='font-poppins text-center text-blue_normal py-7'>---- NUESTROS SERVICIOS ----</h3>
         <div className='servicios grid grid-cols-1  lg:grid-cols-3   gap-5 place-items-stretch  h-full'>
@@ -53,7 +52,8 @@ const Servicios = () => {
           </div>
           <div className='w-full md:temservice h-52  flex items-center gap-3 flex-col text-center'>
             <span className='block bg-blue_light rounded-full p-4'>
-              <img src={service1} />
+              <FaPaintBrush className='text-blue_primary stroke-2' />
+              {/* <img src={service1} /> */}
             </span>
             <h4 className='text-lg font-medium'>Diseño grafico</h4>
             <p className='text-blue_primary'>Conecta con tu público <br /> objetivo con  diseños que <br />exprese las intenciones <br /> de tu negocio.</p>
