@@ -1,0 +1,81 @@
+.ball {
+  width: 100%;
+  height: 100%;
+  animation: bounce 1s infinite alternate;
+  -webkit-animation: bounce 1s infinite alternate;
+}
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+
+.altoinicio {
+  height: 83vh;
+}
+.altoservicios {
+  height: 500px;
+}
+.anchotitulo {
+  min-width: 456px;
+}
+@media (min-width: 100px) {
+  .menu:hover ul {
+    display: block;
+    position: absolute;
+  }
+}
+
+@media (min-width: 578px) {
+  .servicios,
+  .footer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .temservice,
+  .itemfooter {
+    width: 50%;
+    padding: 10px;
+  }
+  .nosotros {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .imgnosotros {
+    min-width: 150px;
+  }
+}
+@media (min-width: 640px) {
+  .menu:hover ul {
+    display: flex;
+    position: inherit;
+  }
+}
+
+@media (min-width: 830px) {
+  .footer {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 860px) {
+  .ball {
+    width: 70%;
+  }
+  .servicios {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .temservice,
+  .itemfooter {
+    width: 33.3%;
+  }
+}

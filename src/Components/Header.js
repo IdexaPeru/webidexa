@@ -10,13 +10,14 @@ const Header = () => {
           <span className='text-blue_primary'>XA</span>
         </h1>
       </div>
-      <nav className='flex items-center gap-5'>
-        <ul className='flex justify-between gap-5'>
+      <nav className='flex menu flex-col  sm:flex-row-reverse transition-all ease-in duration-300  items-center gap-5 relative p-2'>
+        <span className=' text-purple_primary cursor-pointer '><IconMenu /></span>
+        <ul className='justify-between hidden gap-5 absolute  mt-5 mr-10 sm:relative sm:flex sm:mt-0 sm:mr-0 transition ease-in duration-300'>
           <li className='text-purple_normal hover:text-purple_primary cursor-pointer transition ease-in duration-300'><a>Inicio</a></li>
           <li className='text-purple_normal hover:text-purple_primary cursor-pointer transition ease-in duration-300'><a>Servicios</a></li>
           <li className='text-purple_normal hover:text-purple_primary cursor-pointer transition ease-in duration-300'><a>Nosotros</a></li>
         </ul>
-        <span className='text-purple_primary cursor-pointer' ><IconMenu /></span>
+
       </nav>
 
     </header>
