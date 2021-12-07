@@ -12,6 +12,7 @@ const Inicio = () => {
         <div className='select-none flex flex-col gap-5  items-center text-xl mt-10 sm:flex-row sm:justify-center md:w-1/2 md:justify-start '>
           <a
             target='_blank'
+            rel='noopener noreferrer'
             href={`https://wa.me/${NUMERO_MOVIL}?text=${MENSAJE_WHATSAPP}`}
             className='px-10 py-3 shadow-lg hover:shadow-2xl transition ease-in duration-300 hover:text-blue_light bg-blue_primary font-medium  rounded-full text-white '>
 
@@ -26,7 +27,7 @@ const Inicio = () => {
       <div className='  relative hidden   justify-center  items-end md:flex md:absolute md:w-1/2 right-5'>
         {/* <span className='ml-6 w-20 block mx-auto absolute z-30 mt-5 top-0  '><img src={tuerca} /></span> */}
         <div className="ball pt-10">
-          <img src={motor} />
+          <img src={motor} alt='servicio informatico' />
         </div>
       </div>
     </section>

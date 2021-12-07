@@ -15,23 +15,23 @@ const Nosotros = () => {
         </div>
         <div className='pt-10 grid grid-cols-1 nosotros gap-10'>
           <div className=' w-full flex justify-center  itemnosotros   '>
-            <img src={logo1} className='imgnosotros   object-scale-down' />
+            <img src={logo1} className='imgnosotros   object-scale-down' alt='cooking gourmet' />
           </div>
 
           <div className=' w-full flex justify-center itemnosotros'>
-            <img src={logo2} className='imgnosotros  object-scale-down' />
+            <img src={logo2} alt='footloose' className='imgnosotros  object-scale-down' />
           </div>
 
           <div className=' w-full flex justify-center itemnosotros'>
-            <img src={logo3} className='imgnosotros  object-scale-down' />
+            <img src={logo3} alt='instituto san pedro' className='imgnosotros  object-scale-down' />
           </div>
 
           <div className=' w-full flex justify-center itemnosotros'>
-            <img src={logo4} className='imgnosotros  h-28  object-scale-down' />
+            <img src={logo4} alt='inversiones jr huancayo' className='imgnosotros  h-28  object-scale-down' />
           </div>
 
           <div className=' w-full flex justify-center itemnosotros'>
-            <img src={logo5} className='imgnosotros  h-28  object-scale-down' />
+            <img src={logo5} className='imgnosotros  h-28  object-scale-down' alt='la casa del chef' />
           </div>
 
           <div className=' w-full flex justify-center itemnosotros object-scale-down'>
