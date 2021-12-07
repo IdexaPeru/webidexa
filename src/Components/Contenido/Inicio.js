@@ -1,5 +1,5 @@
-import motor from '../../assets/motor.png';
 import { MENSAJE_WHATSAPP, NUMERO_MOVIL } from '../../Variables/globales';
+import { MOTOR } from '../../Variables/imagenes';
 
 const Inicio = () => {
   return (
@@ -25,9 +25,8 @@ const Inicio = () => {
         </div>
       </div>
       <div className='  relative hidden   justify-center  items-end md:flex md:absolute md:w-1/2 right-5'>
-        {/* <span className='ml-6 w-20 block mx-auto absolute z-30 mt-5 top-0  '><img src={tuerca} /></span> */}
         <div className="ball pt-10">
-          <img src={motor} alt='servicio informatico' />
+          <img src={MOTOR} alt='servicio informatico' />
         </div>
       </div>
     </section>

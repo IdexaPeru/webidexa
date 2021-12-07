@@ -1,9 +1,4 @@
-import logo1 from '../../assets/Logos/cooking.png';
-import logo2 from '../../assets/Logos/footloose.png';
-import logo3 from '../../assets/Logos/sanp.png';
-import logo4 from '../../assets/Logos/jr.png';
-import logo5 from '../../assets/Logos/rest1.png';
-
+import { LG_CASACHEF, LG_COOKING, LG_FOOTLOOSE, LG_JR, LG_SANPEDRO } from '../../Variables/imagenes';
 
 const Nosotros = () => {
   return (
@@ -15,23 +10,23 @@ const Nosotros = () => {
         </div>
         <div className='pt-10 grid grid-cols-1 nosotros gap-10'>
           <div className=' w-full flex justify-center  itemnosotros   '>
-            <img src={logo1} className='imgnosotros   object-scale-down' alt='cooking gourmet' />
+            <img src={LG_COOKING} className='imgnosotros   object-scale-down' alt='cooking gourmet' />
           </div>
 
           <div className=' w-full flex justify-center itemnosotros'>
-            <img src={logo2} alt='footloose' className='imgnosotros  object-scale-down' />
+            <img src={LG_FOOTLOOSE} alt='footloose' className='imgnosotros  object-scale-down' />
           </div>
 
           <div className=' w-full flex justify-center itemnosotros'>
-            <img src={logo3} alt='instituto san pedro' className='imgnosotros  object-scale-down' />
+            <img src={LG_SANPEDRO} alt='instituto san pedro' className='imgnosotros  object-scale-down' />
           </div>
 
           <div className=' w-full flex justify-center itemnosotros'>
-            <img src={logo4} alt='inversiones jr huancayo' className='imgnosotros  h-28  object-scale-down' />
+            <img src={LG_JR} alt='inversiones jr huancayo' className='imgnosotros  h-28  object-scale-down' />
           </div>
 
           <div className=' w-full flex justify-center itemnosotros'>
-            <img src={logo5} className='imgnosotros  h-28  object-scale-down' alt='la casa del chef' />
+            <img src={LG_CASACHEF} className='imgnosotros  h-28  object-scale-down' alt='la casa del chef' />
           </div>
 
           <div className=' w-full flex justify-center itemnosotros object-scale-down'>

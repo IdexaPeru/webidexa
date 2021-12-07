@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import logo from '../assets/logo.png';
+import { useState } from 'react';
+import { LOGO } from '../Variables/imagenes';
 import { IconMenu } from './Icons';
 const Header = () => {
   const [position, setPosition] = useState(0);
@@ -15,7 +15,7 @@ const Header = () => {
     <header className={`select-none w-full  flex items-center justify-between px-10 text-lg transition-all  ease-in-out duration-500 ${position >= 50 ? 'fixed shadow-lg z-50 py-2 top-0 bg-white' : 'relative py-4'}`}>
 
       <div className='flex items-center text-3xl font-poppins  gap-5'>
-        <img src={logo} className='w-14' alt='logo de idexa peru' />
+        <img src={LOGO} className='w-14' alt='logo de idexa peru' />
         <h1>
           <span className='text-purple_primary'>IDE</span>
           <span className='text-blue_primary'>XA</span>
