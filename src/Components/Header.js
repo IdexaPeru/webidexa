@@ -13,7 +13,7 @@ const Header = ({ getPosition }) => {
 
 
   return (
-    <header className={`w-full  flex items-center justify-between px-10 text-lg transition-all  ease-in-out duration-500 ${position >= 50 ? 'fixed shadow-lg z-50 py-2 top-0' : 'relative py-4'}`}>
+    <header className={`select-none w-full  flex items-center justify-between px-10 text-lg transition-all  ease-in-out duration-500 ${position >= 50 ? 'fixed shadow-lg z-50 py-2 top-0 bg-white' : 'relative py-4'}`}>
 
       <div className='flex items-center text-3xl font-poppins  gap-5'>
         <img src={logo} className='w-14' />

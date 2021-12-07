@@ -4,6 +4,15 @@
   animation: bounce 1s infinite alternate;
   -webkit-animation: bounce 1s infinite alternate;
 }
+
+/* .ancla:before {
+  display: block;
+  content: " ";
+  margin-top: -140px;
+  height: 140px;
+  visibility: hidden;
+} */
+
 @keyframes bounce {
   from {
     transform: translateY(0px);
@@ -35,6 +44,17 @@
     display: block;
     position: absolute;
   }
+}
+
+*::selection {
+  background: rgb(78, 243, 255);
+  color: rgb(0, 0, 0);
+}
+
+/* Firefox */
+p::-moz-selection {
+  background: green;
+  color: black;
 }
 
 @media (min-width: 578px) {

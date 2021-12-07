@@ -7,7 +7,7 @@ import { FaPaintBrush } from 'react-icons/fa'
 
 const Servicios = () => {
   return (
-    <section id="section-02" className='w-full bg-blue_cero border-blue_normal'>
+    <section id="section-02" className='ancla w-full bg-blue_cero border-blue_normal'>
       <div className='max-w-7xl px-10 mx-auto  pb-10'>
         <h3 className='font-poppins text-center text-blue_normal py-7'>---- NUESTROS SERVICIOS ----</h3>
         <div className='servicios grid grid-cols-1  lg:grid-cols-3   gap-5 place-items-stretch  h-full'>

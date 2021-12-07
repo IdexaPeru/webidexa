@@ -23,7 +23,7 @@ const Footer = () => {
             <ul className='flex flex-col gap-3 pt-4'>
               <li className='flex items-center gap-2 text-blue_primary'>
                 <span ><IconFB /></span>
-                <a href='facebook.com'>facebook</a>
+                <a href='https://www.facebook.com/idexa.peru'>facebook</a>
               </li>
               <li className='flex items-center gap-2 text-blue_primary'>
                 <span ><IconIG /></span>
@@ -46,11 +46,11 @@ const Footer = () => {
               </li>
               <li className='flex items-center gap-2 text-blue_primary -ml-1'>
                 <span ><IconPhone /></span>
-                <a href='facebook.com'>939 616 350</a>
+                <a href='facebook.com'>993 113 084</a>
               </li>
               <li className='flex items-center gap-2 text-blue_primary'>
                 <span ><IconWP /></span>
-                <a href='facebook.com'>939 616 350</a>
+                <a href='facebook.com'>993 113 084</a>
               </li>
             </ul>
           </div>

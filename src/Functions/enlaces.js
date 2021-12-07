@@ -8,9 +8,12 @@ window.document.addEventListener('DOMContentLoaded', (e) => {
       e.preventDefault()
       let target = e.currentTarget.getAttribute('href');
 
-      document.querySelector(target).scrollIntoView({
+      // scroll to target - 160px offset for navbar
+
+      window.scrollTo({
+        top: document.querySelector(target).offsetTop - 160,
         behavior: 'smooth'
-      })
+      });
     })
   })
 })
