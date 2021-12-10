@@ -55,7 +55,7 @@ const Servicios = () => {
               <FaPaintBrush className='text-blue_primary stroke-2' />
               {/* <img src={service1} /> */}
             </span>
-            <h4 className='text-lg font-medium'>Diseño grafico</h4>
+            <h4 className='text-lg font-medium'>Diseño gráfico</h4>
             <p className='text-blue_primary'>Conecta con tu público <br /> objetivo con  diseños que <br />exprese las intenciones <br /> de tu negocio.</p>
           </div>
         </div>
