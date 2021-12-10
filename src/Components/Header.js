@@ -23,7 +23,7 @@ const Header = () => {
       </div>
       <nav className='flex menu flex-col  sm:flex-row-reverse transition-all ease-in duration-300  items-center gap-5 relative p-2'>
         <span className=' text-purple_primary cursor-pointer '><IconMenu /></span>
-        <ul className='justify-between hidden gap-5 absolute  mt-5 mr-10 sm:relative sm:flex sm:mt-0 sm:mr-0 transition ease-in duration-300'>
+        <ul className='justify-between hidden gap-5 absolute  mt-5 mr-10 sm:relative sm:flex sm:mt-0 sm:mr-0 transition ease-in duration-300 bg-white p-2 shadow-lg'>
           <li className='text-purple_normal hover:text-purple_primary cursor-pointer transition ease-in duration-300'>
             <a
               href='#section-01'

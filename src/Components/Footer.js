@@ -27,11 +27,11 @@ const Footer = () => {
               </li>
               <li className='flex items-center gap-2 text-blue_primary'>
                 <span ><IconIG /></span>
-                <a href='facebook.com'>instagram</a>
+                <a >instagram</a>
               </li>
               <li className='flex items-center gap-2 text-blue_primary'>
                 <span ><IconYT /></span>
-                <a href='facebook.com'>youtube</a>
+                <a >youtube</a>
               </li>
             </ul>
           </div>
@@ -42,15 +42,15 @@ const Footer = () => {
             <ul className='flex flex-col gap-3 pt-4'>
               <li className='flex items-center gap-2 text-blue_primary'>
                 <span ><IconEmail /></span>
-                <a href='facebook.com'>idexaperu@gmail.com</a>
+                <a >idexaperu@gmail.com</a>
               </li>
               <li className='flex items-center gap-2 text-blue_primary -ml-1'>
                 <span ><IconPhone /></span>
-                <a href='facebook.com'>993 113 084</a>
+                <a >993 113 084</a>
               </li>
               <li className='flex items-center gap-2 text-blue_primary'>
                 <span ><IconWP /></span>
-                <a href='facebook.com'>993 113 084</a>
+                <a >993 113 084</a>
               </li>
             </ul>
           </div>
