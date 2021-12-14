@@ -9,13 +9,12 @@ import BtnWhatsapp from './Components/Utilidades/BtnWhatsapp';
 import './Functions/enlaces';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDEyT7z-7OEC6KI0LOHtGLT2guy_i6wB2c",
-  authDomain: "web-idexa.firebaseapp.com",
-  projectId: "web-idexa",
-  storageBucket: "web-idexa.appspot.com",
-  messagingSenderId: "517427483198",
-  appId: "1:517427483198:web:004aa5ad2c0e030e43f76f",
-  measurementId: "G-LYPV8P7BNB"
+  apiKey: "AIzaSyBrzq2hJ-w205SpB1j9cyKkuIWwbFEufSY",
+  authDomain: "idexa-peru.firebaseapp.com",
+  projectId: "idexa-peru",
+  storageBucket: "idexa-peru.appspot.com",
+  messagingSenderId: "597924543696",
+  appId: "1:597924543696:web:c3fca7261f010a9cf832d5"
 };
 
 const app = initializeApp(firebaseConfig);

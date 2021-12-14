@@ -54,13 +54,10 @@ const Nosotros = () => {
               <img src={LG_JR} alt='inversiones jr huancayo' className='imgnosotros  h-28  object-scale-down' />
             </a>
           </div>
-
-
           <div className=' w-full flex justify-center itemnosotros object-scale-down'>
           </div>
         </div>
       </div>
-
     </section>
   );
 }
