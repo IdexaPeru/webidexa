@@ -6,7 +6,7 @@ const BtnWhatsapp = () => {
       target="_blank"
       href={`https://wa.me/${NUMERO_MOVIL}?text=${MENSAJE_WHATSAPP}`}
       rel='noopener noreferrer'
-      className='fixed right-16 bottom-20 text-6xl cursor-pointer bg-green-500 rounded-full shadow-2xl '>
+      className='fixed right-5 bottom-5 sm:right-16 sm:bottom-20 text-6xl cursor-pointer bg-green-500 rounded-full shadow-2xl '>
       <BsWhatsapp className='text-white p-4' />
     </a>
   );

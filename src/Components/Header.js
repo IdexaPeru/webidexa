@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <header className={`select-none w-full  flex items-center justify-between px-10 text-lg transition-all  ease-in-out duration-500 ${position >= 50 ? 'fixed shadow-lg z-50 py-2 top-0 bg-white' : 'relative py-4'}`}>
 
-      <div className='flex items-center text-3xl font-poppins  gap-5'>
+      <div className='flex items-center text-2xl sm:text-3xl font-poppins  gap-5'>
         <img src={LOGO} className='w-14' alt='logo de idexa peru' />
         <h1>
           <span className='text-purple_primary'>IDEXA</span>
