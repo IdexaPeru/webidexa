@@ -14,7 +14,8 @@ const firebaseConfig = {
   projectId: "idexa-peru",
   storageBucket: "idexa-peru.appspot.com",
   messagingSenderId: "597924543696",
-  appId: "1:597924543696:web:c3fca7261f010a9cf832d5"
+  appId: "1:597924543696:web:c3fca7261f010a9cf832d5",
+  measurementId: "G-WRPG2JVDY7"
 };
 
 const app = initializeApp(firebaseConfig);
