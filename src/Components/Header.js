@@ -17,8 +17,8 @@ const Header = () => {
       <div className='flex items-center text-3xl font-poppins  gap-5'>
         <img src={LOGO} className='w-14' alt='logo de idexa peru' />
         <h1>
-          <span className='text-purple_primary'>IDE</span>
-          <span className='text-blue_primary'>XA</span>
+          <span className='text-purple_primary'>IDEXA</span>
+          <span className='text-blue_primary'> PERÚ</span>
         </h1>
       </div>
       <nav className='flex menu flex-col  sm:flex-row-reverse transition-all ease-in duration-300  items-center gap-5 relative p-2'>
