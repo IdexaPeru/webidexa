@@ -13,7 +13,6 @@ import Registro from '../pages/auth/Registro';
 import Restore from '../pages/auth/Restore';
 import Clientes from '../pages/Consumidores/Clientes';
 import Comprador from '../pages/Consumidores/Comprador';
-import Creditos from '../pages/creditos/Creditos';
 import Productos from '../pages/productos/Productos';
 
 

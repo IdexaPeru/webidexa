@@ -36,7 +36,7 @@ const Login = () => {
             <Form
               className="w-full md:w-1/2 p-10 flex flex-col items-center gap-5">
               <div className=" w-24 sm:w-40  select-none md:hidden object-contain">
-                <img src={LOGO} />
+                <img src={LOGO} alt="logo de negocios carlos" />
               </div>
               <div className="hidden sm:flex absolute top-5  right-5  sm:top-10 sm:right-10 font-extrabold font-poppins text-color_green_4 text-lg  items-center justify-center gap-x-2">
                 <span><IconCar /></span>
@@ -101,7 +101,7 @@ const Login = () => {
         </Formik>
         <div className="hidden md:w-1/2 md:flex p-10">
           <div className="w-10/12">
-            <img src={IMGDEVELOPER} />
+            <img src={IMGDEVELOPER} alt='img de administrador' />
           </div>
         </div>
       </div>

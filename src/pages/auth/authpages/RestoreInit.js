@@ -1,20 +1,14 @@
 import { Link, useNavigate } from "react-router-dom";
 import IMGDEVELOPER from "../../../assets/img/developer.svg";
 import LOGO from '../../../assets/img/logo.png'
-import { IconCar, IconEmail, IconKey } from "../../../components/Icons";
+import { IconCar, IconKey } from "../../../components/Icons";
 import { Field, Form, Formik } from "formik";
 import Titulo from "../../../components/utilidades/Titulo";
 import ButtonAction from "../../../components/utilidades/ButtonAction";
 import Parrafo from "../../../components/utilidades/Parrafo";
-import PuntosNext from "../../../components/utilidades/PuntosNext";
+
 import * as Yup from "yup";
 
-const rutas = [
-  { id: 1, link: '/registro/datos-basicos' },
-  { id: 2, link: '/registro/datos-personales' },
-  { id: 3, link: '/registro/datos-contacto' },
-  { id: 4, link: '/registro/finalizado' },
-]
 
 const RestoreInit = () => {
 
@@ -43,7 +37,7 @@ const RestoreInit = () => {
           <Form
             className="w-full md:w-1/2 p-10 flex flex-col items-center gap-5">
             <div className=" w-24 md:w-32 sm:w-32  select-none md:hidden object-contain">
-              <img src={LOGO} />
+              <img src={LOGO} alt="dasdasdsa" />
             </div>
             <div className="hidden sm:flex absolute top-5  right-5  sm:top-10 sm:right-10 font-extrabold font-poppins text-color_green_4 text-lg  items-center justify-center gap-x-2">
               <span><IconCar /></span>
@@ -94,7 +88,7 @@ const RestoreInit = () => {
       </Formik>
       <div className="hidden md:w-1/2 md:flex p-10">
         <div className="w-10/12">
-          <img src={IMGDEVELOPER} />
+          <img src={IMGDEVELOPER} alt="dasdasdsa" />
         </div>
       </div>
     </div>

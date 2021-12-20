@@ -1,4 +1,4 @@
-import { Link, Navigate, NavLink, Outlet, Route, Routes } from "react-router-dom";
+import { NavLink, Outlet, } from "react-router-dom";
 import { IconSearch } from "../../components/Icons";
 
 const Comprador = () => {

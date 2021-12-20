@@ -1,8 +1,8 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import IMGDEVELOPER from "../../../assets/img/developer.svg";
 import LOGO from '../../../assets/img/logo.png'
-import { IconCar, IconEmail, IconKey } from "../../../components/Icons";
-import { Field, Form, Formik } from "formik";
+import { IconCar, } from "../../../components/Icons";
+import { Form, Formik } from "formik";
 import Titulo from "../../../components/utilidades/Titulo";
 import ButtonAction from "../../../components/utilidades/ButtonAction";
 import Parrafo from "../../../components/utilidades/Parrafo";
@@ -37,7 +37,7 @@ const MensajeRestore = () => {
           <Form
             className="w-full md:w-1/2 p-10 flex flex-col items-center gap-5">
             <div className=" w-24 md:w-32 sm:w-32  select-none md:hidden object-contain">
-              <img src={LOGO} />
+              <img src={LOGO} alt="logo de negocios carlos" />
             </div>
             <div className="hidden sm:flex absolute top-5  right-5  sm:top-10 sm:right-10 font-extrabold font-poppins text-color_green_4 text-lg  items-center justify-center gap-x-2">
               <span><IconCar /></span>
@@ -62,7 +62,7 @@ const MensajeRestore = () => {
       </Formik>
       <div className="hidden md:w-1/2 md:flex p-10">
         <div className="w-10/12">
-          <img src={IMGDEVELOPER} />
+          <img src={IMGDEVELOPER} alt="imagen de administrador" />
         </div>
       </div>
     </div>
