@@ -24,8 +24,8 @@ const Login = () => {
       <div className="max-w-5xl  flex justify-center items-center ">
         <Formik
           initialValues={{
-            email: 'yelsino@321.com',
-            password: '321321',
+            email: '',
+            password: '',
           }}
           validationSchema={validar}
           onSubmit={(values) => {
@@ -50,13 +50,13 @@ const Login = () => {
                 </div>
                 <Field
                   autoComplete={"off"}
-                  className='border-2 rounded-md p-4 outline-none bg-color_green_2 border-color_green_6 text-base sm:text-lg text-color_green_7 font-medium w-full '
+                  className=' rounded-md p-4 outline-none   text-base sm:text-lg text-color_green_7  w-full bg-color_green_3'
                   name="email"
                   id='email'
                 />
                 <label
                   htmlFor='email'
-                  className="absolute right-2 top-7 text-color_green_4 bg-color_green_2 p-3 sm:p-4">
+                  className="absolute right-2 top-7 text-color_green_7 p-3 sm:p-4">
                   <IconEmail />
                 </label>
               </div>
@@ -74,11 +74,11 @@ const Login = () => {
                     name="password"
                     id='password'
                     type="password"
-                    className='border-2 rounded-md p-4  outline-none bg-color_green_2 border-color_green_5 text-base sm:text-lg text-color_green_7 font-medium w-full'
+                    className='rounded-md p-4 outline-none   text-base sm:text-lg text-color_green_7  w-full bg-color_green_3'
                   />
                   <label
                     htmlFor='email'
-                    className="absolute text-color_green_4 right-5">
+                    className="absolute text-color_green_7 right-5">
                     <IconKey />
                   </label>
                 </div>
@@ -91,10 +91,10 @@ const Login = () => {
                   text="CONTINUAR"
                 />
 
-                <Link to="/restore" className="text-center text-color_green_4 cursor-pointer">
+                <Link to="/auth/restore" className="text-center text-color_green_4 cursor-pointer">
                   <p className="text-center text-color_green_6 cursor-pointer mb-3">Olvidé mis credenciales</p>
                 </Link>
-                <Link to="/registro" className="text-center text-color_green_4 cursor-pointer"><p>Registrarme</p></Link>
+                <Link to="/auth/registro" className="text-center text-color_green_4 cursor-pointer"><p>Registrarme</p></Link>
               </div>
             </Form>
           )}
