@@ -1,0 +1,14 @@
+.cliente_item_compras {
+  height: calc(100vh - 420px);
+}
+.cliente_item_creditos {
+  height: calc(100vh - 380px);
+}
+
+.items_clientes {
+  height: calc(100vh - 220px);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

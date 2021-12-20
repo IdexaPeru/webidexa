@@ -1,5 +1,6 @@
 import { Link, NavLink, Outlet, useLocation, } from "react-router-dom";
 import { IconSearch } from "../../components/Icons";
+import './comprador.css'
 
 const Comprador = () => {
 
@@ -18,7 +19,7 @@ const Comprador = () => {
       </div>
 
       <div className="absolute top-5 left-0 flex justify-between w-11/12 text-lg font-medium font-poppins ">
-        <span className="block w-6" />
+        <span className="block w-10" />
         <div className="flex items-center">
           <NavLink to='/comprador/clientes' className={({ isActive }) => (`transition ease-in duration-200 ${isActive ? ' text-color_green_7' : 'text-color_green_4'}`)} >
             clientes

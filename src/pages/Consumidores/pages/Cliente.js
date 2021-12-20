@@ -15,11 +15,11 @@ const Cliente = () => {
 
 
 
-  const navstiles = (isActive) => (`flex items-center gap-x-1 ${isActive ? 'bg-color_green_3' : ''} `);
+  const navstiles = (isActive) => (`flex items-center gap-x-1 p-3 rounded-lg ${isActive ? 'bg-color_green_3' : ''} `);
 
   return (
-    <div className='w-full '>
-      <h2 className=' text-center bg-color_green_3 text-sm text-color_green_7 tracking-widest'>{
+    <div className='w-full'>
+      <h2 className=' text-center bg-color_green_3 text-sm text-color_green_7 tracking-widest py-4 rounded-lg'>{
         currentPath[4] === 'nuevo-credito' ?
           'NUEVO CREDITO'
           : `SOY EL CLIENTE ${id}`
@@ -30,7 +30,7 @@ const Cliente = () => {
       }
       {
         currentPath[4] !== 'nuevo-credito' &&
-        <div className='text-color_green_7 flex justify-between my-5'>
+        <div className='text-color_green_7 flex justify-between my-5 '>
           <NavLink to={`/comprador/clientes/${id}/compras`} className={({ isActive }) => (navstiles(isActive))}>
             <IconBox />
             Compras
