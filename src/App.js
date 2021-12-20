@@ -7,6 +7,7 @@ import Registro from './pages/auth/Registro';
 import Restore from './pages/auth/Restore';
 import Consumidores from './pages/Consumidores/Comprador';
 import Admin from './pages/Admin';
+import RouterApp from './router/RouterApp';
 
 function App() {
   const [isLoggedIn, setLoggedIn] = useState(false);
@@ -25,7 +26,8 @@ function App() {
   return (
     <div className=' h-screen'>
       <Router>
-        <Routes>
+        <RouterApp />
+        {/* <Routes>
           <Route path='/login' element={<Login />} />
           <Route path='/registro/*' element={<Registro />} />
           <Route path='/registro' element={<Navigate to='/registro/datos-basicos' />} />
@@ -63,7 +65,7 @@ function App() {
             <Route path='proveedor' element={<p>SOY PROVEEDOR</p>} />
           </Route>
           <Route path="*" element={<PageNotFound />} />
-        </Routes>
+        </Routes> */}
       </Router>
     </div>
   );
