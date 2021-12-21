@@ -4,14 +4,14 @@ import { IconBox, IconCard, IconUser } from '../../../components/Icons';
 const Cliente = () => {
 
   const params = useParams();
-  const { id } = params;
+  const { clienteID } = params;
 
   const location = useLocation()
 
   const { pathname } = location;
 
   const currentPath = pathname.split('/');
-  console.log(currentPath[4]);
+
 
 
 
@@ -22,7 +22,7 @@ const Cliente = () => {
       <h2 className=' text-center bg-color_green_3 text-sm text-color_green_7 tracking-widest py-4 rounded-lg'>{
         currentPath[4] === 'nuevo-credito' ?
           'NUEVO CREDITO'
-          : `SOY EL CLIENTE ${id}`
+          : `SOY EL CLIENTE ${clienteID}`
       }</h2>
       {
         currentPath[4] === 'nuevo-credito' &&
@@ -31,15 +31,15 @@ const Cliente = () => {
       {
         currentPath[4] !== 'nuevo-credito' &&
         <div className='text-color_green_7 flex justify-between my-5 '>
-          <NavLink to={`/comprador/clientes/${id}/compras`} className={({ isActive }) => (navstiles(isActive))}>
+          <NavLink to={`/comprador/clientes/${clienteID}/compras`} className={({ isActive }) => (navstiles(isActive))}>
             <IconBox />
             Compras
           </NavLink>
-          <NavLink to={`/comprador/clientes/${id}/creditos`} className={({ isActive }) => (navstiles(isActive))}>
+          <NavLink to={`/comprador/clientes/${clienteID}/creditos`} className={({ isActive }) => (navstiles(isActive))}>
             <IconCard />
             Creditos
           </NavLink>
-          <NavLink to={`/comprador/clientes/${id}/info`} className={({ isActive }) => (navstiles(isActive))}>
+          <NavLink to={`/comprador/clientes/${clienteID}/info`} className={({ isActive }) => (navstiles(isActive))}>
             <IconUser />
             Datos
           </NavLink>

@@ -83,7 +83,7 @@ const NuevoCredito = () => {
           </span>
         </div>
       </div>
-      <div className="fixed bottom-0 z-20 w-10/12">
+      <div className="absolute  z-20 w-10/12 bottom-20">
         <ButtonAction text='REGISTRAR' onClick={() => navigate('/')} />
       </div>
     </div>

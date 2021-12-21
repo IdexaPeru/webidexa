@@ -19,6 +19,10 @@ import ClienteCompras from '../pages/Consumidores/pages/ClienteCompras';
 import ClienteCreditos from '../pages/Consumidores/pages/ClienteCreditos';
 import ClienteInfo from '../pages/Consumidores/pages/ClienteInfo';
 import ClienteSearch from '../pages/Consumidores/pages/ClienteSearch';
+import Compra from '../pages/Consumidores/pages/compras/Compra';
+import Fotos from '../pages/Consumidores/pages/compras/Fotos';
+import HistorialAbonos from '../pages/Consumidores/pages/compras/HistorialAbonos';
+import Credito from '../pages/Consumidores/pages/creditos/Credito';
 import NuevoCredito from '../pages/Consumidores/pages/NuevoCredito';
 import Usuarios from '../pages/Consumidores/Usuarios';
 // import ClienteSearch from '../pages/Consumidores/pages/clienteSearch';
@@ -72,13 +76,31 @@ const RouterApp = () => {
             },
 
             {
-              path: '/comprador/clientes/:id', element: <Cliente />,
+              path: '/comprador/clientes/:clienteID', element: <Cliente />,
               children: [
-                { path: `${rcliente}:id/*`, element: <p>404</p> },
-                { path: `${rcliente}:id/info`, element: <ClienteInfo /> },
-                { path: `${rcliente}:id/compras`, element: <ClienteCompras /> },
-                { path: `${rcliente}:id/creditos`, element: <ClienteCreditos /> },
-                { path: `${rcliente}:id/nuevo-credito`, element: <NuevoCredito /> },
+                { path: `${rcliente}:clienteID/*`, element: <p>404</p> },
+                { path: `${rcliente}:clienteID/info`, element: <ClienteInfo /> },
+                {
+                  path: `${rcliente}:clienteID/compras`, element: <ClienteCompras />, children: [
+                    {
+                      path: `${rcliente}:clienteID/compras/:compraID`, element: <Compra />, children: [
+                        { path: `${rcliente}:clienteID/compras/:compraID/abonos`, element: <HistorialAbonos /> },
+                        { path: `${rcliente}:clienteID/compras/:compraID/fotos`, element: <Fotos /> },
+                      ]
+                    },
+                  ]
+                },
+                {
+                  path: `${rcliente}:clienteID/creditos`, element: <ClienteCreditos />, children: [
+                    {
+                      path: `${rcliente}:clienteID/creditos/:creditoID`, element: <Credito />, children: [
+                        { path: `${rcliente}:clienteID/creditos/:creditoID/abonos`, element: <HistorialAbonos /> },
+                        { path: `${rcliente}:clienteID/creditos/:creditoID/fotos`, element: <Fotos /> },
+                      ]
+                    }
+                  ]
+                },
+                { path: `${rcliente}:clienteID/nuevo-credito`, element: <NuevoCredito /> },
               ]
             },
 
