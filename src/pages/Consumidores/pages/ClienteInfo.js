@@ -8,7 +8,7 @@ const ClienteInfo = () => {
       <p className="text-color_green_6">Correo: <span className="text-color_green_7">Yelsin Yelsiño</span></p>
       <p className="text-color_green_6">Provincia: <span className="text-color_green_7">Yelsin Yelsiño</span></p>
       <p className="text-color_green_6">Dirección: <span className="text-color_green_7">Yelsin Yelsiño</span></p>
-      <p className="text-base text-color_green_5 text-center absolute bottom-32 w-full left-0">eliminar usuario</p>
+      <p className="text-base text-color_green_5 text-center absolute bottom-20 w-full left-0">eliminar usuario</p>
     </div>
   );
 }

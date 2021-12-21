@@ -20,9 +20,12 @@ import ClienteCreditos from '../pages/Consumidores/pages/ClienteCreditos';
 import ClienteInfo from '../pages/Consumidores/pages/ClienteInfo';
 import ClienteSearch from '../pages/Consumidores/pages/ClienteSearch';
 import Compra from '../pages/Consumidores/pages/compras/Compra';
+import DatosCompra from '../pages/Consumidores/pages/compras/DatosCompra';
 import Fotos from '../pages/Consumidores/pages/compras/Fotos';
 import HistorialAbonos from '../pages/Consumidores/pages/compras/HistorialAbonos';
 import Credito from '../pages/Consumidores/pages/creditos/Credito';
+import DatosCredito from '../pages/Consumidores/pages/creditos/DatosCredito';
+import NuevoAbono from '../pages/Consumidores/pages/creditos/NuevoAbono';
 import NuevoCredito from '../pages/Consumidores/pages/NuevoCredito';
 import Usuarios from '../pages/Consumidores/Usuarios';
 // import ClienteSearch from '../pages/Consumidores/pages/clienteSearch';
@@ -86,6 +89,7 @@ const RouterApp = () => {
                       path: `${rcliente}:clienteID/compras/:compraID`, element: <Compra />, children: [
                         { path: `${rcliente}:clienteID/compras/:compraID/abonos`, element: <HistorialAbonos /> },
                         { path: `${rcliente}:clienteID/compras/:compraID/fotos`, element: <Fotos /> },
+                        { path: `${rcliente}:clienteID/compras/:compraID/detalles`, element: <DatosCompra /> },
                       ]
                     },
                   ]
@@ -96,6 +100,8 @@ const RouterApp = () => {
                       path: `${rcliente}:clienteID/creditos/:creditoID`, element: <Credito />, children: [
                         { path: `${rcliente}:clienteID/creditos/:creditoID/abonos`, element: <HistorialAbonos /> },
                         { path: `${rcliente}:clienteID/creditos/:creditoID/fotos`, element: <Fotos /> },
+                        { path: `${rcliente}:clienteID/creditos/:creditoID/detalles`, element: <DatosCredito /> },
+                        // { path: `${rcliente}:clienteID/creditos/:creditoID/nuevo-abono`, element: <NuevoAbono /> },
                       ]
                     }
                   ]

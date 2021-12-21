@@ -37,7 +37,7 @@ const ClienteCompras = () => {
 
             <div id='divider' className="cliente_item_compras text-color_green_6 flex flex-col gap-y-5 overflow-y-auto ">
               {compras.map((compra) => (
-                <Link key={compra.id} to={`/comprador/clientes/${clienteID}/compras/${compra.id}/abonos`} className="flex justify-between w-full ">
+                <Link key={compra.id} to={`/comprador/clientes/${clienteID}/compras/${compra.id}/detalles`} className="flex justify-between w-full ">
                   <div className="w-3/12">159 soles</div>
                   <div className="w-5/12 text-center"> 12/05/2021</div>
                   <div className="w-3/12 text-right flex gap-x-3 items-center"><span>credito</span> <span><IconLink /></span></div>

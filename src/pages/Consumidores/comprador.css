@@ -1,13 +1,33 @@
+.items_clientes {
+  height: calc(100vh - 220px);
+}
 .cliente_item_compras {
   height: calc(100vh - 420px);
 }
 .cliente_item_creditos {
-  height: calc(100vh - 380px);
+  height: calc(100vh - 400px);
+  padding-bottom: 50px;
 }
 
-.items_clientes {
-  height: calc(100vh - 220px);
+.historial_abonos,
+.datos_compra {
+  height: calc(100vh - 380px);
+  padding-bottom: 60px;
 }
+
+.detalle_credito {
+  height: calc(100vh - 400px);
+  padding-bottom: 60px;
+}
+
+.nuevo_credito {
+  height: calc(100vh - 200px);
+  padding-bottom: 60px;
+}
+
+/* .compras_item {
+  height: calc(100vh - 275px);
+} */
 
 ::-webkit-scrollbar {
   display: none;

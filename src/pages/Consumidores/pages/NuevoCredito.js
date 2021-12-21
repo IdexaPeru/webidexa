@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
-import { IconCamera, IconClean, IconMoney, IconPicture, IconSearch } from "../../../components/Icons";
+import { IconCamera, IconMoney, IconPicture } from "../../../components/Icons";
 import ButtonAction from "../../../components/utilidades/ButtonAction";
 
 const NuevoCredito = () => {
   const navigate = useNavigate()
   return (
-    <div className="flex flex-col items-center gap-y-5 mt-5">
+    <div className="nuevo_credito overflow-y-auto flex flex-col items-center gap-y-5 mt-5   ">
 
       <div className="w-10/12">
         <label
@@ -83,7 +83,7 @@ const NuevoCredito = () => {
           </span>
         </div>
       </div>
-      <div className="absolute  z-20 w-10/12 bottom-20">
+      <div className="   w-10/12 ">
         <ButtonAction text='REGISTRAR' onClick={() => navigate('/')} />
       </div>
     </div>

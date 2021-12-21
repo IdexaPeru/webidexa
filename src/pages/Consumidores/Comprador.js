@@ -14,9 +14,6 @@ const Comprador = () => {
   return (
 
     <div className="max-w-6xl w-full mt-10">
-      <div className="w-full px-7">
-        <Outlet />
-      </div>
 
       <div className="absolute top-5 left-0 flex justify-between w-11/12 text-lg font-medium font-poppins ">
         <span className="block w-10" />
@@ -31,6 +28,11 @@ const Comprador = () => {
         </div>
         <Link to={`/comprador/search/${currentPath}`} className="text-color_green_4"><IconSearch /></Link>
       </div>
+      <div className="w-full px-7">
+        <Outlet />
+      </div>
+
+
     </div>
 
   );
