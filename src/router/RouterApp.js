@@ -101,7 +101,7 @@ const RouterApp = () => {
                         { path: `${rcliente}:clienteID/creditos/:creditoID/abonos`, element: <HistorialAbonos /> },
                         { path: `${rcliente}:clienteID/creditos/:creditoID/fotos`, element: <Fotos /> },
                         { path: `${rcliente}:clienteID/creditos/:creditoID/detalles`, element: <DatosCredito /> },
-                        // { path: `${rcliente}:clienteID/creditos/:creditoID/nuevo-abono`, element: <NuevoAbono /> },
+                        { path: `${rcliente}:clienteID/creditos/:creditoID/nuevo-abono`, element: <NuevoAbono /> },
                       ]
                     }
                   ]
