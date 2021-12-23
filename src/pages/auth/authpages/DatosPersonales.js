@@ -32,7 +32,6 @@ const DatosPersonales = () => {
       }}
       validationSchema={validar}
       onSubmit={(values) => {
-        console.log(values);
         navigate('/auth/registro/datos-contacto')
       }}
     >

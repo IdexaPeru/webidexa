@@ -7,7 +7,7 @@ const Admin = () => {
   const { pathname } = location;
 
   const currentPath = pathname.split('/');
-  const rutas = ['nuevo-credito', 'search'];
+  const rutas = ['nuevo-credito', 'search', 'nuevo-abono'];
 
   var filterRutes = rutas.filter((tag) => (currentPath.includes(tag) && tag));
 

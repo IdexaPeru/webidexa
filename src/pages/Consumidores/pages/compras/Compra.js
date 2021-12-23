@@ -1,5 +1,5 @@
 import { NavLink, Outlet, useParams } from "react-router-dom";
-import { IconBox, IconCard, IconUser } from "../../../../components/Icons";
+import { IconBox, IconCard } from "../../../../components/Icons";
 
 const Compra = () => {
 

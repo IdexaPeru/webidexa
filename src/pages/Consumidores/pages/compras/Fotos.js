@@ -1,4 +1,4 @@
-import { IconCamera, IconPicture } from "../../../../components/Icons";
+import { IconPicture } from "../../../../components/Icons";
 
 const Fotos = () => {
   return (

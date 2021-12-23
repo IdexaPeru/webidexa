@@ -38,7 +38,7 @@ const HistorialAbonos = () => {
         <span className="w-3/12 text-right">S/. 10.00</span>
       </p>
       <p className="text-center text-color_green_7 text-sm">
-        <p>NO HAY MAS DATOS</p>
+        <span>NO HAY MAS DATOS</span>
       </p>
     </div>
   );

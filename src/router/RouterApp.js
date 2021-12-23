@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navigate, Outlet, useRoutes } from 'react-router-dom';
+import { Navigate, useRoutes } from 'react-router-dom';
 import Admin from '../pages/Admin';
 import Auth from '../pages/Auth';
 import DatosBasicos from '../pages/auth/authpages/DatosBasicos';
@@ -28,8 +28,6 @@ import DatosCredito from '../pages/Consumidores/pages/creditos/DatosCredito';
 import NuevoAbono from '../pages/Consumidores/pages/creditos/NuevoAbono';
 import NuevoCredito from '../pages/Consumidores/pages/NuevoCredito';
 import Usuarios from '../pages/Consumidores/Usuarios';
-// import ClienteSearch from '../pages/Consumidores/pages/clienteSearch';
-import Productos from '../pages/productos/Productos';
 
 
 const RouterApp = () => {

@@ -3,15 +3,8 @@ import { IconLink } from "../../../components/Icons";
 
 const ClienteCompras = () => {
 
-
-  document.addEventListener('DOMContentLoaded', (e) => {
-    const divider = document.getElementById('divider').getBoundingClientRect();
-    console.log(divider.top);
-  });
-
   const params = useParams()
   const { clienteID, compraID } = params
-  console.log(params);
 
 
   return (

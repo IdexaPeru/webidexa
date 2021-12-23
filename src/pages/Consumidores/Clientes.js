@@ -4,10 +4,6 @@ import { IconLink } from "../../components/Icons";
 
 const Clientes = () => {
 
-  document.addEventListener('DOMContentLoaded', (e) => {
-    const divider = document.getElementById('clientesss').getBoundingClientRect();
-    console.log(divider.top);
-  });
 
   const clientes = [
     { id: '1', nombre: 'Sideral carreon ' },

@@ -3,7 +3,6 @@ import { IconCard, IconLink } from "../../../components/Icons";
 
 const ClienteCreditos = () => {
   const params = useParams()
-  console.log(params);
   const { clienteID, creditoID } = params
   return (
     <>
@@ -23,7 +22,7 @@ const ClienteCreditos = () => {
 
             <div className="cliente_item_creditos text-color_green_6 flex flex-col gap-y-5 overflow-y-auto ">
               {creditos.map(credito => (
-                <Link to={`/comprador/clientes/${clienteID}/creditos/${credito.id}/abonos`} className="flex justify-between w-full ">
+                <Link key={credito.id} to={`/comprador/clientes/${clienteID}/creditos/${credito.id}/detalles`} className="flex justify-between w-full ">
                   <div className="w-8/12">Lunes 18 de nov. 2021</div>
                   <div className="w-4/12 flex items-center gap-x-3 justify-end ">
                     <span>125 soles</span>

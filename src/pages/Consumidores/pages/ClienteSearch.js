@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { IconArrow, IconClean, IconKey, IconSearch } from "../../../components/Icons";
+import { IconArrow, IconClean, IconSearch } from "../../../components/Icons";
 
 const ClienteSearch = () => {
   const [textsearch, setTextSearch] = useState('');
