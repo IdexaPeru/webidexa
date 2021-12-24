@@ -14,13 +14,10 @@ const Admin = () => {
 
 
 
-
-
   return (
     <>
-      <div className="bg-color_green_1 h-full flex pt-10 items-center flex-col">
+      <div className="bg-color_green_1 h-full flex  items-center flex-col relative  ">
 
-        <Outlet />
         {
           filterRutes.length !== 1 &&
           <div className="w-full absolute p-2 bg-color_green_9  bottom-0  flex justify-center">
@@ -29,14 +26,17 @@ const Admin = () => {
                 <IconUsers />
               </NavLink>
               {/* <NavLink to='/productos' className={({ isActive }) => (`transition ease-in duration-200 ${isActive ? ' text-color_green_3' : 'text-color_green_2'}`)} >
-            productos
-          </NavLink> */}
+                productos
+              </NavLink> */}
               <NavLink to='/config' className={({ isActive }) => (`transition ease-in duration-200 ${isActive ? ' text-color_green_3' : 'text-color_green_2'}`)} >
                 <IconConfig />
               </NavLink>
             </div>
           </div>
         }
+
+        <Outlet />
+
 
       </div>
 

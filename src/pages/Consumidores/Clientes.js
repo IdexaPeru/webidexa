@@ -27,11 +27,11 @@ const Clientes = () => {
   return (
     <div>
       <div className=" flex justify-between text-sm mb-3">
-        <div className="w-6/12 text-color_green_7 font-semibold inline "><div className="  inline">Nombres</div></div>
+        <div className="w-6/12 text-color_green_8 font-semibold inline "><div className="  inline">Nombres</div></div>
 
-        <div className="w-2/12  text-color_green_7 font-semibold inline text-center">Compra</div>
+        <div className="w-2/12  text-color_green_8 font-semibold inline text-center">Compra</div>
 
-        <div className=" w-3/12 text-color_green_7 font-semibold inline text-center "><span className="">Inversión</span> </div>
+        <div className=" w-3/12 text-color_green_8 font-semibold inline text-right pr-4 "><span className="">Inversión</span> </div>
 
         <div className="w-1/12"></div>
       </div>
@@ -44,8 +44,8 @@ const Clientes = () => {
           >
             <span className="w-6/12 overflow-hidden">{` ${cliente.nombre}`}</span>
             <span className="w-2/12 text-center ">{` ${270}`}</span>
-            <span className="w-3/12 text-center ">{`s/ ${400}`}</span>
-            <span className="w-1/12 text-center "><IconLink /></span>
+            <span className="w-3/12 text-right pr-4   ">{`s/ ${400}`}</span>
+            <span className="w-1/12 text-left  "><IconLink /></span>
 
           </Link>
         ))}

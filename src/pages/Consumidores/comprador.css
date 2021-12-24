@@ -32,3 +32,16 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+/* screen */
+
+@media screen and (max-width: 350px) {
+  * {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 370px) {
+  * {
+    font-size: 13px;
+  }
+}

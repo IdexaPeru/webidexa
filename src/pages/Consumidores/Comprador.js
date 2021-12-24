@@ -13,22 +13,22 @@ const Comprador = () => {
 
   return (
 
-    <div className="max-w-6xl w-full mt-10">
+    <div className="max-w-7xl w-full  ">
 
-      <div className="absolute top-5 left-0 flex justify-between w-11/12 text-lg font-medium font-poppins ">
+      <div className=" top-5 left-0 flex justify-between  text-lg font-medium font-poppins  my-7   px-7 ">
         <span className="block w-10" />
         <div className="flex items-center">
           <NavLink to='/comprador/clientes' className={({ isActive }) => (`transition ease-in duration-200 ${isActive ? ' text-color_green_7' : 'text-color_green_4'}`)} >
             clientes
           </NavLink>
-          <span className="mx-2 block w-1 h-4 bg-color_green_4" />
+          <span className="mx-4 block w-1 h-4 bg-color_green_4" />
           <NavLink to='/comprador/usuarios' className={({ isActive }) => (`transition ease-in duration-200 ${isActive ? ' text-color_green_7' : 'text-color_green_4'}`)} >
             usuarios
           </NavLink>
         </div>
-        <Link to={`/comprador/search/${currentPath}`} className="text-color_green_4"><IconSearch /></Link>
+        <Link to={`/comprador/search/${currentPath}`} className="text-color_green_5"><IconSearch /></Link>
       </div>
-      <div className="w-full px-7">
+      <div className="w-full px-7 ">
         <Outlet />
       </div>
 
