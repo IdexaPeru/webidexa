@@ -27,7 +27,7 @@ const Clientes = () => {
   return (
     <div>
       <div className=" flex justify-between text-sm mb-3">
-        <div className="w-6/12 text-color_green_8 font-semibold inline "><div className="  inline">Nombres</div></div>
+        <div className="w-6/12 text-color_green_8 font-semibold inline"><div className="  inline">Nombres</div></div>
 
         <div className="w-2/12  text-color_green_8 font-semibold inline text-center">Compra</div>
 
