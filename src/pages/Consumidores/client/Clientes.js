@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { IconLink } from "../../components/Icons";
-
+import { IconLink } from "../../../components/Icons";
 
 const Clientes = () => {
 

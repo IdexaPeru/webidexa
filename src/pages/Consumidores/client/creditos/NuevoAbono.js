@@ -1,5 +1,6 @@
 import ButtonAction from "../../../../components/utilidades/ButtonAction";
 
+
 const NuevoAbono = () => {
   return (
     <div className="flex flex-col gap-y-7 mt-7 ">

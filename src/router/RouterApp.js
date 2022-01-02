@@ -12,28 +12,43 @@ import Login from '../pages/auth/Login';
 import Registro from '../pages/auth/Registro';
 import Restore from '../pages/auth/Restore';
 import Config from '../pages/Config/Config';
-import Clientes from '../pages/Consumidores/Clientes';
+import Cliente from '../pages/Consumidores/client/Cliente';
+import ClienteCompras from '../pages/Consumidores/client/ClienteCompras';
+import ClienteCreditos from '../pages/Consumidores/client/ClienteCreditos';
+import Clientes from '../pages/Consumidores/client/Clientes';
 import Comprador from '../pages/Consumidores/Comprador';
-import Cliente from '../pages/Consumidores/pages/Cliente';
-import ClienteCompras from '../pages/Consumidores/pages/ClienteCompras';
-import ClienteCreditos from '../pages/Consumidores/pages/ClienteCreditos';
-import ClienteInfo from '../pages/Consumidores/pages/ClienteInfo';
-import ClienteSearch from '../pages/Consumidores/pages/ClienteSearch';
-import Compra from '../pages/Consumidores/pages/compras/Compra';
-import DatosCompra from '../pages/Consumidores/pages/compras/DatosCompra';
-import Fotos from '../pages/Consumidores/pages/compras/Fotos';
-import HistorialAbonos from '../pages/Consumidores/pages/compras/HistorialAbonos';
-import Credito from '../pages/Consumidores/pages/creditos/Credito';
-import DatosCredito from '../pages/Consumidores/pages/creditos/DatosCredito';
-import NuevoAbono from '../pages/Consumidores/pages/creditos/NuevoAbono';
-import NuevoCredito from '../pages/Consumidores/pages/NuevoCredito';
-import Usuarios from '../pages/Consumidores/Usuarios';
+import ClienteInfo from '../pages/Consumidores/client/ClienteInfo';
+import ClienteSearch from '../pages/Consumidores/client/ClienteSearch';
+import Compra from '../pages/Consumidores/client/compras/Compra';
+import DatosCompra from '../pages/Consumidores/client/compras/DatosCompra';
+import Fotos from '../pages/Consumidores/client/compras/Fotos';
+import HistorialAbonos from '../pages/Consumidores/client/compras/HistorialAbonos';
+import Credito from '../pages/Consumidores/client/creditos/Credito';
+import DatosCredito from '../pages/Consumidores/client/creditos/DatosCredito';
+import NuevoAbono from '../pages/Consumidores/client/creditos/NuevoAbono';
+import NuevoCredito from '../pages/Consumidores/client/NuevoCredito';
+import Usuarios from '../pages/Consumidores/user/Usuarios';
+import Usuario from '../pages/Consumidores/user/Usuario';
+import UsuarioComponents from '../pages/Consumidores/user/UsuarioComponents';
+import UsuarioInfo from '../pages/Consumidores/user/UsuarioInfo';
+import UsuarioCompras from '../pages/Consumidores/user/UsuarioCompras';
+import UsuarioListas from '../pages/Consumidores/user/UsuarioListas';
+import UsuarioDirecciones from '../pages/Consumidores/user/UserDirecciones';
+import UsuarioReclamos from '../pages/Consumidores/user/UsuarioReclamos';
+import CompraDetalle from '../pages/Consumidores/user/Compras/CompraDetalle';
+import CompraUsuario from '../pages/Consumidores/user/Compras/Compra';
+import CompraProductos from '../pages/Consumidores/user/Compras/CompraProductos';
+import CompraReclamos from '../pages/Consumidores/user/Compras/CompraReclamos';
+import ListaUsuario from '../pages/Consumidores/user/Listas/ListaUsuario';
+import DireccionUsuario from '../pages/Consumidores/user/Direcciones/DireccionUsuario';
+import ReclamoUsuario from '../pages/Consumidores/user/Reclamos/ReclamoUsuario';
 
 
 const RouterApp = () => {
   const rregistro = '/auth/registro/'
   const rrestore = '/auth/restore/'
   const rcliente = '/comprador/clientes/'
+  const rusuario = '/comprador/usuarios/'
 
   let routes = [
     {
@@ -68,7 +83,16 @@ const RouterApp = () => {
           path: '/comprador/search/:search', element: <ClienteSearch />,
         },
         {
-          path: '/config', element: <Config />,
+          path: '/configuracion', element: <Config />,
+        },
+        {
+          path: '/productos', element: <p>PRODUCTOS</p>,
+        },
+        {
+          path: '/pedidos', element: <p>PEDIDOS</p>,
+        },
+        {
+          path: '/reportes', element: <p>REPORTES</p>,
         },
         {
           path: '/comprador', element: <Comprador />, children: [
@@ -108,7 +132,30 @@ const RouterApp = () => {
               ]
             },
 
-            { path: '/comprador/usuarios', element: <Usuarios /> }
+            {
+              path: '/comprador/usuarios', element: <Usuarios />,
+            },
+            {
+              path: '/comprador/usuarios/:userID', element: <Usuario />, children: [
+                { path: `${rusuario}:userID/elementos`, element: <UsuarioComponents /> },
+                { path: `${rusuario}:userID/datos`, element: <UsuarioInfo /> },
+                { path: `${rusuario}:userID/compras`, element: <UsuarioCompras /> },
+                {
+                  path: `${rusuario}:userID/compras/:compraID`, element: <CompraUsuario />, children: [
+                    { path: `${rusuario}:userID/compras/:compraID/detalle`, element: <CompraDetalle /> },
+                    { path: `${rusuario}:userID/compras/:compraID/productos`, element: <CompraProductos /> },
+                    { path: `${rusuario}:userID/compras/:compraID/reclamos`, element: <CompraReclamos /> },
+                  ]
+                },
+
+                { path: `${rusuario}:userID/listas`, element: <UsuarioListas /> },
+                { path: `${rusuario}:userID/listas/:listaID`, element: <ListaUsuario /> },
+                { path: `${rusuario}:userID/direcciones`, element: <UsuarioDirecciones /> },
+                { path: `${rusuario}:userID/direcciones/:direccionID`, element: <DireccionUsuario /> },
+                { path: `${rusuario}:userID/reclamos`, element: <UsuarioReclamos /> },
+                { path: `${rusuario}:userID/reclamos/:reclamoID`, element: <ReclamoUsuario /> },
+              ]
+            },
           ]
         },
       ]
