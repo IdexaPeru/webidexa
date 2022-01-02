@@ -7,7 +7,7 @@ const ClienteSearch = () => {
 
 
   return (
-    <div className=" w-11/12">
+    <div className=" w-11/12 pt-10">
       <div className="flex  justify-center">
 
         <div className="relative flex items-center w-11/12 ">

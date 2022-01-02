@@ -42,6 +42,7 @@ import CompraReclamos from '../pages/Consumidores/user/Compras/CompraReclamos';
 import ListaUsuario from '../pages/Consumidores/user/Listas/ListaUsuario';
 import DireccionUsuario from '../pages/Consumidores/user/Direcciones/DireccionUsuario';
 import ReclamoUsuario from '../pages/Consumidores/user/Reclamos/ReclamoUsuario';
+import ComprasAdmin from '../pages/Compras/ComprasAdmin';
 
 
 const RouterApp = () => {
@@ -89,7 +90,10 @@ const RouterApp = () => {
           path: '/productos', element: <p>PRODUCTOS</p>,
         },
         {
-          path: '/pedidos', element: <p>PEDIDOS</p>,
+          path: '/ventas', element: <ComprasAdmin />, children: [
+            { path: '/ventas/pedidos', element: <p>SOY LOS PEDIDOS</p> },
+            { path: '/ventas/reclamos', element: <p>SOY LOS RECLAMOS</p> },
+          ],
         },
         {
           path: '/reportes', element: <p>REPORTES</p>,
