@@ -12,37 +12,51 @@ import Login from '../pages/auth/Login';
 import Registro from '../pages/auth/Registro';
 import Restore from '../pages/auth/Restore';
 import Config from '../pages/Config/Config';
-import Cliente from '../pages/Consumidores/client/Cliente';
-import ClienteCompras from '../pages/Consumidores/client/ClienteCompras';
-import ClienteCreditos from '../pages/Consumidores/client/ClienteCreditos';
-import Clientes from '../pages/Consumidores/client/Clientes';
+import Cliente from '../pages/Consumidores/Caseros/Casero';
+import ClienteCompras from '../pages/Consumidores/Caseros/CaseroCompras';
+import ClienteCreditos from '../pages/Consumidores/Caseros/CaseroCreditos';
+import Clientes from '../pages/Consumidores/Caseros/Caseros';
 import Comprador from '../pages/Consumidores/Comprador';
-import ClienteInfo from '../pages/Consumidores/client/ClienteInfo';
-import ClienteSearch from '../pages/Consumidores/client/ClienteSearch';
-import Compra from '../pages/Consumidores/client/compras/Compra';
-import DatosCompra from '../pages/Consumidores/client/compras/DatosCompra';
-import Fotos from '../pages/Consumidores/client/compras/Fotos';
-import HistorialAbonos from '../pages/Consumidores/client/compras/HistorialAbonos';
-import Credito from '../pages/Consumidores/client/creditos/Credito';
-import DatosCredito from '../pages/Consumidores/client/creditos/DatosCredito';
-import NuevoAbono from '../pages/Consumidores/client/creditos/NuevoAbono';
-import NuevoCredito from '../pages/Consumidores/client/NuevoCredito';
-import Usuarios from '../pages/Consumidores/user/Usuarios';
-import Usuario from '../pages/Consumidores/user/Usuario';
-import UsuarioComponents from '../pages/Consumidores/user/UsuarioComponents';
-import UsuarioInfo from '../pages/Consumidores/user/UsuarioInfo';
-import UsuarioCompras from '../pages/Consumidores/user/UsuarioCompras';
-import UsuarioListas from '../pages/Consumidores/user/UsuarioListas';
-import UsuarioDirecciones from '../pages/Consumidores/user/UserDirecciones';
-import UsuarioReclamos from '../pages/Consumidores/user/UsuarioReclamos';
-import CompraDetalle from '../pages/Consumidores/user/Compras/CompraDetalle';
-import CompraUsuario from '../pages/Consumidores/user/Compras/Compra';
-import CompraProductos from '../pages/Consumidores/user/Compras/CompraProductos';
-import CompraReclamos from '../pages/Consumidores/user/Compras/CompraReclamos';
-import ListaUsuario from '../pages/Consumidores/user/Listas/ListaUsuario';
-import DireccionUsuario from '../pages/Consumidores/user/Direcciones/DireccionUsuario';
-import ReclamoUsuario from '../pages/Consumidores/user/Reclamos/ReclamoUsuario';
+import ClienteInfo from '../pages/Consumidores/Caseros/CaseroInfo';
+import ClienteSearch from '../pages/Consumidores/Caseros/CaseroSearch';
+import Compra from '../pages/Consumidores/Caseros/compras/Compra';
+import DatosCompra from '../pages/Consumidores/Caseros/compras/DatosCompra';
+import Fotos from '../pages/Consumidores/Caseros/compras/Fotos';
+import HistorialAbonos from '../pages/Consumidores/Caseros/compras/HistorialAbonos';
+import Credito from '../pages/Consumidores/Caseros/creditos/Credito';
+import DatosCredito from '../pages/Consumidores/Caseros/creditos/DatosCredito';
+import NuevoAbono from '../pages/Consumidores/Caseros/creditos/NuevoAbono';
+import NuevoCredito from '../pages/Consumidores/Caseros/NuevoCredito';
+import Usuarios from '../pages/Consumidores/Usuarios/Usuarios';
+import Usuario from '../pages/Consumidores/Usuarios/Usuario';
+import UsuarioComponents from '../pages/Consumidores/Usuarios/UsuarioComponents';
+import UsuarioInfo from '../pages/Consumidores/Usuarios/UsuarioInfo';
+import UsuarioCompras from '../pages/Consumidores/Usuarios/UsuarioCompras';
+import UsuarioListas from '../pages/Consumidores/Usuarios/UsuarioListas';
+import UsuarioDirecciones from '../pages/Consumidores/Usuarios/UserDirecciones';
+import UsuarioReclamos from '../pages/Consumidores/Usuarios/UsuarioReclamos';
+import CompraDetalle from '../pages/Consumidores/Usuarios/Compras/CompraDetalle';
+import CompraUsuario from '../pages/Consumidores/Usuarios/Compras/Compra';
+import CompraProductos from '../pages/Consumidores/Usuarios/Compras/CompraProductos';
+import CompraReclamos from '../pages/Consumidores/Usuarios/Compras/CompraReclamos';
+import ListaUsuario from '../pages/Consumidores/Usuarios/Listas/ListaUsuario';
+import DireccionUsuario from '../pages/Consumidores/Usuarios/Direcciones/DireccionUsuario';
+import ReclamoUsuario from '../pages/Consumidores/Usuarios/Reclamos/ReclamoUsuario';
 import ComprasAdmin from '../pages/Compras/ComprasAdmin';
+import PedidosActivos from '../pages/Compras/Pedidos/PedidosActivos';
+import PedidoActivo from '../pages/Compras/Pedidos/PedidoActivo';
+import PedidoDetalle from '../pages/Compras/Pedidos/PedidoDetalle';
+import PedidoProductos from '../pages/Compras/Pedidos/PedidoProductos';
+import PedidoTracking from '../pages/Compras/Pedidos/PedidoTracking';
+import Reportes from '../pages/Reportes/Reportes';
+import ReportePrecios from '../pages/Reportes/ReportePrecios';
+import ReporteProductos from '../pages/Reportes/RerpoteProductos';
+import ReporteVentas from '../pages/Reportes/ReporteVentas';
+import Productos from '../pages/productos/Productos';
+import ProductoVegetal from '../pages/productos/ProductoVegetal';
+import ProductosFrutas from '../pages/productos/ProductosFrutas';
+import ProductosAbarrotes from '../pages/productos/ProductosAbarrotes';
+import ReclamosActivos from '../pages/Compras/Reclamos/ReclamosActivos';
 
 
 const RouterApp = () => {
@@ -87,16 +101,41 @@ const RouterApp = () => {
           path: '/configuracion', element: <Config />,
         },
         {
-          path: '/productos', element: <p>PRODUCTOS</p>,
+          path: '/productos', element: <Productos />,
+        },
+        {
+          path: '/productos/vegetales', element: <ProductoVegetal />,
+        },
+        {
+          path: '/productos/frutas', element: <ProductosFrutas />,
+        },
+        {
+          path: '/productos/abarrotes', element: <ProductosAbarrotes />,
         },
         {
           path: '/ventas', element: <ComprasAdmin />, children: [
-            { path: '/ventas/pedidos', element: <p>SOY LOS PEDIDOS</p> },
-            { path: '/ventas/reclamos', element: <p>SOY LOS RECLAMOS</p> },
+            { path: '/ventas/pedidos', element: <PedidosActivos /> },
+            {
+              path: '/ventas/pedidos/:pedidoactivoID', element: <PedidoActivo />, children: [
+                { path: '/ventas/pedidos/:pedidoactivoID/detalles', element: <PedidoDetalle /> },
+                { path: '/ventas/pedidos/:pedidoactivoID/productos', element: <PedidoProductos /> },
+                { path: '/ventas/pedidos/:pedidoactivoID/tracking', element: <PedidoTracking /> },
+              ]
+            },
+            { path: '/ventas/reclamos', element: <ReclamosActivos /> },
           ],
         },
         {
-          path: '/reportes', element: <p>REPORTES</p>,
+          path: '/reportes', element: <Reportes />,
+        },
+        {
+          path: '/reportes/ventas', element: <ReporteVentas />,
+        },
+        {
+          path: '/reportes/productos', element: <ReporteProductos />,
+        },
+        {
+          path: '/reportes/precios', element: <ReportePrecios />,
         },
         {
           path: '/comprador', element: <Comprador />, children: [

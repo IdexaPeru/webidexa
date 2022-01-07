@@ -1,0 +1,6 @@
+.sidebar-web {
+  height: calc(100vh - 50px);
+  overflow-y: scroll;
+  min-width: 170px;
+  max-width: 210px;
+}

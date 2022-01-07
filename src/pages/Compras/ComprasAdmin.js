@@ -1,5 +1,6 @@
 import { Link, NavLink, Outlet, useLocation, } from "react-router-dom";
 import { IconSearch } from "../../components/Icons";
+import './compras.css'
 
 const ComprasAdmin = () => {
 
@@ -20,12 +21,12 @@ const ComprasAdmin = () => {
           <NavLink to='/ventas/pedidos' className={({ isActive }) => (`transition ease-in duration-200 ${isActive ? ' text-color_green_7' : 'text-color_green_4'}`)} >
             pedidos
           </NavLink>
-          <span className="mx-4 block w-1 h-4 bg-color_green_4" />
+          <span className="mx-4 block w-1 h-4 bg-color_green_4 rounded-full" />
           <NavLink to='/ventas/reclamos' className={({ isActive }) => (`transition ease-in duration-200 ${isActive ? ' text-color_green_7' : 'text-color_green_4'}`)} >
             reclamos
           </NavLink>
         </div>
-        <Link to={`/comprador/search/${currentPath}`} className="text-color_green_5"><IconSearch /></Link>
+        <Link to={`/comprador/search/${currentPath}`} className="text-color_green_6"><IconSearch /></Link>
       </div>
       <div className="w-full px-7 ">
         <Outlet />
