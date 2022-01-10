@@ -4,6 +4,7 @@
 }
 .cliente_item_compras {
   height: calc(100vh - 420px);
+  padding-bottom: 40px;
 }
 .cliente_item_creditos {
   height: calc(100vh - 400px);
@@ -29,10 +30,6 @@
 /* .compras_item {
   height: calc(100vh - 275px);
 } */
-
-::-webkit-scrollbar {
-  display: none;
-}
 
 /* screen */
 

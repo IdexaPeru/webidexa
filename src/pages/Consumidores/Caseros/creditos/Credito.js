@@ -12,15 +12,15 @@ const Credito = () => {
   const rutas = ['nuevo-abono'];
   var filterRutes = rutas.filter((tag) => (currentPath.includes(tag) && tag));
 
-  const navstiles = (isActive) => (`flex items-center gap-x-1 p-3 rounded-lg ${isActive ? 'bg-color_green_2 text-color_green_7' : 'text-color_green_5'} `);
+  const navstiles = (isActive) => (`flex items-center gap-x-1 px-3 font-semibold py-1 rounded-lg ${isActive ? 'text-color_green_7' : 'text-color_gray_1'} `);
 
 
 
 
 
   return (
-    <div>
-      <div className="bg-color_green_4  block w-full border border-color_green_4" />
+    <div className="w-full max-w-md mx-auto ">
+      <div className="border-b " />
       {
         filterRutes.length !== 1 &&
         <div className=' flex justify-between my-7'>

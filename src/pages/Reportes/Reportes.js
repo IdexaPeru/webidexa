@@ -1,9 +1,26 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { IconCar, IconCardBuy, IconPrecios, IconProduct } from "../../components/Icons";
 import './reportes.css'
 const Reportes = () => {
   return (
-    <div className="w-11/12 mt-7 ">
+
+    <div className=" p-5 pt-6">
+      <Outlet />
+
+
+
+    </div>
+
+
+
+  );
+}
+
+export default Reportes;
+
+
+
+{/* <div className="w-11/12 mt-7 ">
       <p className="text-lg font-medium text-center text-color_green_7">Reportes</p>
 
       <div className="flex flex-col gap-y-10 mt-10 ml-2">
@@ -41,8 +58,4 @@ const Reportes = () => {
         </Link>
       </div>
 
-    </div>
-  );
-}
-
-export default Reportes;
+    </div> */}

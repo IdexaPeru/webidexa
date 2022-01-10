@@ -19,14 +19,14 @@ const Comprador = () => {
         <span className="block w-10" />
         <div className="flex items-center">
           <NavLink to='/comprador/clientes' className={({ isActive }) => (`transition ease-in duration-200 ${isActive ? ' text-color_green_7' : 'text-color_green_4'}`)} >
-            Ceseros
+            Caseros
           </NavLink>
           <span className="mx-3 sm:mx-6 block w-1 h-4 bg-color_green_4 rounded-full" />
           <NavLink to='/comprador/usuarios' className={({ isActive }) => (`transition ease-in duration-200 ${isActive ? ' text-color_green_7' : 'text-color_green_4'}`)} >
             Usuarios
           </NavLink>
         </div>
-        <Link to={`/comprador/search/${currentPath}`} className="text-color_green_6 flex ">
+        <Link to={`/comprador/search/${currentPath}`} className="text-color_green_7 flex ">
           <span className="sm:hidden">
             <IconSearch />
           </span>

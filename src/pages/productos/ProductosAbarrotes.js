@@ -2,7 +2,7 @@ import './productos.css'
 const ProductosAbarrotes = () => {
   return (
 
-    <div className="w-11/12 p-5">
+    <div className="w-11/12 p-5 mx-auto">
       <p className=" my-5 text-lg font-poppins font-medium text-color_green_7 text-center">Vegetales</p>
       <div className="productos_vegetales overflow-y-auto flex gap-y-5 flex-col overflow-hidden text-sm  ">
 

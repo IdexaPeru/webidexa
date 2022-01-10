@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from "react-router-dom";
-import { IconCardBuy, IconCardBuyInactive, IconConfig, IconConfigInactivo, IconEstadistica, IconEstadisticaInactivo, IconProduct, IconProductInactivo, IconUsers, IconUsersInactive } from "../../Icons";
+import { IconCardBuy, IconCardBuyInactive, IconConfig, IconConfigInactivo, IconEstadistica, IconEstadisticaInactivo, IconProduct, IconProductInactivo, IconUsers, IconUsersInactive, IconWork } from "../../Icons";
 
 const Menu = () => {
 
@@ -10,7 +10,7 @@ const Menu = () => {
   const currentPath = pathname.split('/');
 
   return (
-    <div className="  py-5  font-poppins font-semibold flex flex-col border-b border-color_green_4 gap-y-5">
+    <div className="  py-5   font-semibold font-mono text-lg flex flex-col border-b border-color_green_4 gap-y-5">
       <NavLink to='/ventas/pedidos' className={`transition ease-in duration-300  flex items-center gap-x-2 ${currentPath[1] === 'ventas' ? ' text-color_green_7' : 'text-color_gray_1'}`} >
         <IconCardBuyInactive />
         <span>Ventas</span>
@@ -31,8 +31,8 @@ const Menu = () => {
 
       </NavLink>
 
-      <NavLink to='/configuracion' className={`transition ease-in duration-300  flex items-center gap-x-2 ${currentPath[1] === 'configuracion' ? ' text-color_green_7' : 'text-color_gray_1'}`} >
-        <IconConfigInactivo />
+      <NavLink to='/trabajadores' className={`transition ease-in duration-300  flex items-center gap-x-2 ${currentPath[1] === 'trabajadores' ? ' text-color_green_7' : 'text-color_gray_1'}`} >
+        <IconWork />
         <span>Trabajadores</span>
       </NavLink>
     </div>

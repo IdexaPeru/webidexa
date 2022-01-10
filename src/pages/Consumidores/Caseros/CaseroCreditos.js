@@ -9,7 +9,7 @@ const ClienteCreditos = () => {
       {
         creditoID ? <Outlet />
           :
-          <div>
+          <div className="w-full mx-auto max-w-md">
             <div className="flex justify-between text-color_green_5">
               <div className="flex  gap-x-7 w-full justify-center">
                 <span>Deuda</span>
@@ -18,7 +18,8 @@ const ClienteCreditos = () => {
               </div>
 
             </div>
-            <div className="border border-color_green_4 w-full my-5"></div>
+            {/* divider */}
+            <div className="border-b border-color_green_4 w-full my-5"></div>
 
             <div className="cliente_item_creditos text-color_green_6 flex flex-col gap-y-5 overflow-y-auto ">
               {creditos.map(credito => (
@@ -26,7 +27,7 @@ const ClienteCreditos = () => {
                   <div className="w-8/12">Lunes 18 de nov. 2021</div>
                   <div className="w-4/12 flex items-center gap-x-3 justify-end ">
                     <span>125 soles</span>
-                    <span ><IconLink /></span>
+                    <span className="text-color_green_7"><IconLink /></span>
                   </div>
 
                 </Link>

@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from "react-router-dom";
-import { IconCardBuy, IconCardBuyInactive, IconConfig, IconConfigInactivo, IconEstadistica, IconEstadisticaInactivo, IconProduct, IconProductInactivo, IconUsers, IconUsersInactive } from "../../Icons";
+import { IconCardBuy, IconCardBuyInactive, IconConfig, IconConfigInactivo, IconEstadistica, IconEstadisticaInactivo, IconProduct, IconProductInactivo, IconUsers, IconUsersInactive, IconWork } from "../../Icons";
 
 const Sidebar = () => {
   const location = useLocation()
@@ -10,7 +10,7 @@ const Sidebar = () => {
 
 
   return (
-    <div className="w-full left-0 absolute p-2 bg-color_green_1 z-30  bottom-0  flex justify-center sm:hidden">
+    <div className="w-full left-0 fixed p-2 bg-color_green_1 z-30  bottom-0  flex justify-center sm:hidden">
       <div className=" py-3 w-11/12 left-0 text-color_green_3 flex justify-around font-semibold font-poppins   ">
         <NavLink
           to='/comprador/clientes' className={`transition ease-in duration-300 ${currentPath[1] === 'comprador' ? ' text-color_green_7' : 'text-color_gray_1'}`}
@@ -21,14 +21,14 @@ const Sidebar = () => {
           <IconCardBuyInactive />
 
         </NavLink>
-        <NavLink to='/reportes' className={`transition ease-in duration-300 ${currentPath[1] === 'reportes' ? ' text-color_green_7' : 'text-color_gray_1'}`} >
+        {/* <NavLink to='/reportes' className={`transition ease-in duration-300 ${currentPath[1] === 'reportes' ? ' text-color_green_7' : 'text-color_gray_1'}`} >
           <IconEstadisticaInactivo />
-        </NavLink>
+        </NavLink> */}
         <NavLink to='/productos' className={({ isActive }) => (`transition ease-in duration-300 ${isActive ? ' text-color_green_7' : 'text-color_gray_1'}`)} >
           <IconProductInactivo />
         </NavLink>
-        <NavLink to='/configuracion' className={`transition ease-in duration-300 ${currentPath[1] === 'configuracion' ? ' text-color_green_7' : 'text-color_gray_1'}`} >
-          <IconConfigInactivo />
+        <NavLink to='/trabajadores' className={`transition ease-in duration-300 ${currentPath[1] === 'trabajadores' ? ' text-color_green_7' : 'text-color_gray_1'}`} >
+          <IconWork />
         </NavLink>
       </div>
     </div>

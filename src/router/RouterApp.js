@@ -12,12 +12,12 @@ import Login from '../pages/auth/Login';
 import Registro from '../pages/auth/Registro';
 import Restore from '../pages/auth/Restore';
 import Config from '../pages/Config/Config';
-import Cliente from '../pages/Consumidores/Caseros/Casero';
+import Casero from '../pages/Consumidores/Caseros/Casero';
 import ClienteCompras from '../pages/Consumidores/Caseros/CaseroCompras';
 import ClienteCreditos from '../pages/Consumidores/Caseros/CaseroCreditos';
 import Clientes from '../pages/Consumidores/Caseros/Caseros';
 import Comprador from '../pages/Consumidores/Comprador';
-import ClienteInfo from '../pages/Consumidores/Caseros/CaseroInfo';
+import CaseroInfo from '../pages/Consumidores/Caseros/CaseroInfo';
 import ClienteSearch from '../pages/Consumidores/Caseros/CaseroSearch';
 import Compra from '../pages/Consumidores/Caseros/compras/Compra';
 import DatosCompra from '../pages/Consumidores/Caseros/compras/DatosCompra';
@@ -43,8 +43,6 @@ import ListaUsuario from '../pages/Consumidores/Usuarios/Listas/ListaUsuario';
 import DireccionUsuario from '../pages/Consumidores/Usuarios/Direcciones/DireccionUsuario';
 import ReclamoUsuario from '../pages/Consumidores/Usuarios/Reclamos/ReclamoUsuario';
 import ComprasAdmin from '../pages/Compras/ComprasAdmin';
-import PedidosActivos from '../pages/Compras/Pedidos/PedidosActivos';
-import PedidoActivo from '../pages/Compras/Pedidos/PedidoActivo';
 import PedidoDetalle from '../pages/Compras/Pedidos/PedidoDetalle';
 import PedidoProductos from '../pages/Compras/Pedidos/PedidoProductos';
 import PedidoTracking from '../pages/Compras/Pedidos/PedidoTracking';
@@ -56,7 +54,14 @@ import Productos from '../pages/productos/Productos';
 import ProductoVegetal from '../pages/productos/ProductoVegetal';
 import ProductosFrutas from '../pages/productos/ProductosFrutas';
 import ProductosAbarrotes from '../pages/productos/ProductosAbarrotes';
-import ReclamosActivos from '../pages/Compras/Reclamos/ReclamosActivos';
+import PedidosActivos from '../pages/Compras/PedidosActivos';
+import PedidoActivo from '../pages/Compras/Pedidos/PedidoActivo';
+import ReclamosActivos from '../pages/Compras/ReclamosActivos';
+import Trabajadores from '../pages/Trabajadores/Trabajadores';
+import Trabajador from '../pages/Trabajadores/Trabajador';
+import Chat from '../pages/Trabajadores/Chat/Chat';
+import TrabajadorCall from '../pages/Trabajadores/TrabajadorCall';
+import TrabajadorInfo from '../pages/Trabajadores/TrabajadorInfo';
 
 
 const RouterApp = () => {
@@ -101,6 +106,23 @@ const RouterApp = () => {
           path: '/configuracion', element: <Config />,
         },
         {
+          path: '/reportes', element: <Reportes />, children: [
+            { path: '/reportes/ventas', element: <ReporteVentas /> },
+            { path: '/reportes/productos', element: <ReporteProductos /> },
+            { path: '/reportes/precios', element: <ReportePrecios /> },
+          ],
+        },
+        {
+          path: '/trabajadores', element: <Trabajadores />,
+        },
+        {
+          path: '/trabajadores/:trabajadorID', element: <Trabajador />, children: [
+            { path: '/trabajadores/:trabajadorID/chat', element: <Chat /> },
+            { path: '/trabajadores/:trabajadorID/info', element: <TrabajadorInfo /> },
+            { path: '/trabajadores/:trabajadorID/call', element: <TrabajadorCall /> },
+          ]
+        },
+        {
           path: '/productos', element: <Productos />,
         },
         {
@@ -125,18 +147,7 @@ const RouterApp = () => {
             { path: '/ventas/reclamos', element: <ReclamosActivos /> },
           ],
         },
-        {
-          path: '/reportes', element: <Reportes />,
-        },
-        {
-          path: '/reportes/ventas', element: <ReporteVentas />,
-        },
-        {
-          path: '/reportes/productos', element: <ReporteProductos />,
-        },
-        {
-          path: '/reportes/precios', element: <ReportePrecios />,
-        },
+
         {
           path: '/comprador', element: <Comprador />, children: [
             {
@@ -144,10 +155,10 @@ const RouterApp = () => {
             },
 
             {
-              path: '/comprador/clientes/:clienteID', element: <Cliente />,
+              path: '/comprador/clientes/:clienteID', element: <Casero />,
               children: [
                 { path: `${rcliente}:clienteID/*`, element: <p>404</p> },
-                { path: `${rcliente}:clienteID/info`, element: <ClienteInfo /> },
+                { path: `${rcliente}:clienteID/info`, element: <CaseroInfo /> },
                 {
                   path: `${rcliente}:clienteID/compras`, element: <ClienteCompras />, children: [
                     {

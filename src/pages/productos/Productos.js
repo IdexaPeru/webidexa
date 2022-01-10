@@ -9,7 +9,7 @@ import IconLeche from '../../assets/img/icons/manzana.png';
 const Productos = () => {
   const [textsearch, setTextSearch] = useState('');
   return (
-    <div className=" w-11/12 p-5 mt-5">
+    <div className="w-11/12 mx-auto">
       <p className="text-center text-color_green_7 font-poppins text-lg">Productos</p>
 
 

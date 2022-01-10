@@ -27,52 +27,45 @@ const Usuarios = () => {
 
   return (
     <div className="">
-      <div className=" flex justify-between text-sm sm:text-lg mb-3 font-poppins px-5">
-        <div className="w-6/12 text-color_gray_1 font-bold inline"><div className="  inline">Nombres</div></div>
+      <div className=" flex justify-between text-sm sm:text-lg mb-3 font-poppins pr-5 sm:px-5">
+        <div className="w-8/12 sm:w-6/12 text-color_gray_1 font-bold inline"><div className="  inline">Nombres</div></div>
 
-        <div className="flex w-6/12">
-          <div className="font-bold inline text-center text-color_gray_1 w-full ">Total</div>
+        <div className="flex w-4/12 sm:w-6/12">
+          <div className="font-bold   text-color_gray_1 w-full text-center hidden sm:inline">Total</div>
 
           <div className="font-bold w-full  text-center   text-color_gray_1 hidden md:inline truncate ">Reclamos</div>
 
           <div className=" w-full font-bold  text-center  text-color_gray_1 ">Gastó </div>
         </div>
-
       </div>
-      <div className="items_clientes overflow-y-auto px-5">
+
+      <div className="items_clientes overflow-y-auto sm:px-5 pr-5">
         {clientes.map(cliente => (
-          <div className=" flex items-center relative">
-            <Link
-              key={cliente.id}
-              to={`/comprador/usuarios/${cliente.id}/datos`}
-              className="flex items-center justify-between   text-color_green_6  w-full py-5  font-poppins text-sm sm:text-base font-light md:font-normal select-none  "
-            >
+          <Link
+            key={cliente.id}
+            to={`/comprador/usuarios/${cliente.id}/datos`}
+            className="text-gray-500 hover:text-color_green_7 text-base sm:text-lg w-full relative flex items-center py-2"
+          >
+            <div className="w-8/12 sm:w-6/12 flex items-center gap-x-3 ">
+              <img className="  rounded-full object-cover h-10 w-10" src={cliente.img} />
+              <p className='truncate'>{` ${cliente.nombre}`}</p>
+            </div>
 
-              <div className="w-6/12 flex items-center gap-x-3 ">
-                <img className="  rounded-full object-cover h-11 w-11" src={cliente.img} />
-                <p className='truncate'>{` ${cliente.nombre}`}</p>
-              </div>
-              <div className="w-6/12 flex ">
-                <span className=" text-center   w-full ">{` ${200}`}</span>
-                <span className=" md:inline hidden text-center w-full">{`${5}`}</span>
-                <span className=" flex justify-center   w-full">
-                  <span className=" text-center ">{`s/ ${400}`}</span>
-                </span >
+            <div className="w-4/12 sm:w-6/12 flex ">
+              <span className=" text-center   w-full hidden sm:inline ">{` ${200}`}</span>
+              <span className=" md:inline hidden text-center w-full">{`3`}</span>
+              <span className=" flex justify-center   w-full">
+                <span className=" text-center ">{`s/ ${400}`}</span>
+              </span >
 
-              </div >
-              <div className=" absolute -right-5 text-color_green_7"><IconLink /></div>
-            </Link>
+            </div >
+            <div className=" absolute -right-5 text-color_green_7"><IconLink /></div>
 
-          </div>
-
+          </Link>
         ))}
       </div>
-
     </div>
   );
 }
 
 export default Usuarios;
-
-
-

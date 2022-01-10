@@ -11,7 +11,7 @@ module.exports = {
         color_green_5: '#ADC2B0',
         color_green_6: '#749F7B',
         color_green_7: '#00A91A',
-        color_green_8: '#019519',
+        color_green_8: '#2EE44B',
 
         color_gray_1: '#494949',
         color_gray_2: '#000000',
@@ -26,3 +26,4 @@ module.exports = {
   },
   plugins: [],
 }
+// 

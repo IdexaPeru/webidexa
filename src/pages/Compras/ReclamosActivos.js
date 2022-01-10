@@ -1,18 +1,40 @@
 import { Link } from "react-router-dom";
-import { IconLink } from "../../../components/Icons";
+import { IconLink } from "../../components/Icons";
 
 const ReclamosActivos = () => {
   return (
     <div>
 
-      <div className="pedidos-activos overflow-y-auto flex flex-col gap-y-5">
+      <div className="flex font-bold text-color_gray_1 mb-5 font-poppins sm:text-lg sm:px-5">
+        <span className=" w-9/12 truncate md:w-7/12">Asunto</span>
+        <div className="flex  w-3/12 md:w-5/12">
+          <span className="w-full hidden md:flex justify-center ">Fecha</span>
+          <span className="w-full   text-center">Orden</span>
+        </div>
+      </div>
+
+      <div className="pedidos-activos overflow-y-auto flex flex-col gap-y-5  sm:px-5">
         {listas.map(l => (
-          <Link key={l.id} to={`/ventas/pedidos/${l.id}/detalles`}>
-            <p className="flex justify-between text-color_green_6">{l.nombre}<div className="flex items-center gap-x-3"><span># 0{l.codigo}</span><span className="text-color_green_5"><IconLink /></span></div></p>
+          <Link
+            key={l.id} to={`/comprador/usuarios/3/reclamos/8`}
+            className=" text-gray-500 hover:text-color_green_7 text-base sm:text-lg w-full relative flex items-center py-1 "
+          >
+            <div className="w-full flex ">
+              <span className=" w-9/12 truncate md:w-7/12">{l.nombre}</span>
+              <div className=" flex  w-3/12 md:w-5/12">
+
+                <span className="w-full hidden md:flex justify-center  truncate">12/05/21 5pm</span>
+                <span className="w-full   text-center">#010</span>
+
+              </div>
+            </div>
+            <span className="text-color_green_7 absolute right-0 md:-right-3 "><IconLink /></span>
           </Link>
         ))}
 
       </div>
+
+
     </div>
   );
 }

@@ -1,7 +1,8 @@
 import { NavLink, Outlet, useLocation, useParams } from 'react-router-dom'
 import { IconBox, IconCard, IconUser } from '../../../components/Icons';
+import { PERFIL10, PERFIL3, PERFIL4, PERFIL5, PERFIL6, PERFIL7, PERFIL8, PERFIL9 } from '../../../components/Images';
 
-const Cliente = () => {
+const Casero = () => {
 
   const params = useParams();
   const { clienteID } = params;
@@ -19,14 +20,25 @@ const Cliente = () => {
 
   return (
     <div className='w-full overflow-auto'>
-      <h2 className=' text-center bg-color_green_3 text-sm text-color_green_7 tracking-widest py-4 rounded-lg'>{`SOY EL CLIENTE ${clienteID}`}</h2>
+      {/* <h2 className=' text-center bg-color_green_3 text-sm text-color_green_7 tracking-widest py-4 rounded-lg'>{`SOY EL CLIENTE ${clienteID}`}</h2> */}
+      <div className="flex items-center gap-x-5 sm:gap-x-10 border-b pb-7 border-color_green_4">
+        <img className="img_perfil w-20 h-20 sm:w-28 sm:h-28 object-cover  " src={PERFIL3} />
+        <div>
+          <p className="text-3xl sm:text-4xl font-poppins font-bold text-color_gray_1">Kimberly</p>
+          <p className="text-lg sm:text-xl text-gray-600 truncate">Kimberly Felipe Castillo Rivero</p>
+        </div>
+      </div>
       {
         currentPath[4] === 'nuevo-credito' &&
         <p className='text-center text-color_green_5 mt-2'>NUEVO CREDITO</p>
       }
       {
         currentPath[4] !== 'nuevo-credito' &&
-        <div className='text-color_green_7 flex justify-between my-5 '>
+        <div className='text-color_green_7 flex justify-between my-5 w-full max-w-md mx-auto  '>
+          <NavLink to={`/comprador/clientes/${clienteID}/info`} className={({ isActive }) => (navstiles(isActive))}>
+            <IconUser />
+            Datos
+          </NavLink>
           <NavLink to={`/comprador/clientes/${clienteID}/compras`} className={({ isActive }) => (navstiles(isActive))}>
             <IconBox />
             Compras
@@ -35,16 +47,15 @@ const Cliente = () => {
             <IconCard />
             Creditos
           </NavLink>
-          <NavLink to={`/comprador/clientes/${clienteID}/info`} className={({ isActive }) => (navstiles(isActive))}>
-            <IconUser />
-            Datos
-          </NavLink>
+
         </div>
       }
 
-      <Outlet />
+      <div className=' flex'>
+        <Outlet />
+      </div>
     </div>
   );
 }
 
-export default Cliente;
+export default Casero;
