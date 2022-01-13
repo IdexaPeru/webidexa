@@ -2,6 +2,11 @@ import './App.css';
 import { BrowserRouter as Router } from 'react-router-dom'
 import { initializeApp } from "firebase/app";
 import RouterApp from './router/RouterApp';
+import { AuthProvider } from './context/auth/AuthContext';
+import NotificacionState from './context/Notificaciones/notificacionState';
+import Notificaciones from './components/utilidades/Notificaciones/Notificaciones';
+import { SocketProvider } from './context/Socket/SocketContext';
+import { ChatProvider } from './context/chat/ChatContext';
 
 function App() {
 
@@ -18,9 +23,18 @@ function App() {
   initializeApp(firebaseConfig);
   return (
     <div className=' h-screen'>
-      <Router>
-        <RouterApp />
-      </Router>
+      <NotificacionState>
+        <AuthProvider>
+          <ChatProvider>
+            <SocketProvider>
+              <Router>
+                <RouterApp />
+              </Router>
+              <Notificaciones />
+            </SocketProvider>
+          </ChatProvider>
+        </AuthProvider>
+      </NotificacionState>
 
     </div>
   );

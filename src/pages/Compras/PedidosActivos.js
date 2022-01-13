@@ -1,7 +1,14 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { IconLink } from "../../components/Icons";
+import { AuthContext } from "../../context/auth/AuthContext";
+
 
 const PedidosActivos = () => {
+
+  const { auth } = useContext(AuthContext);
+
+
   return (
     <div className="">
 

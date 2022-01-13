@@ -12,8 +12,8 @@
 
 .navbar_menu {
   visibility: hidden;
-  opacity: 0;
-  transition: all 0.4s ease-in-out;
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
 }
 .navbar_item_b {
   /* box-shadow: 2.8px 5.6px 10px #0ac927; */

@@ -6,10 +6,17 @@ import * as Yup from 'yup'
 import { Link, useNavigate } from 'react-router-dom'
 import Titulo from "../../components/utilidades/Titulo";
 import ButtonAction from "../../components/utilidades/ButtonAction";
+import { useContext } from "react";
+import { AuthContext } from "../../context/auth/AuthContext";
+import NotificacionContext from "../../context/Notificaciones/notificacionContext";
 
 const Login = () => {
 
+  const { login } = useContext(AuthContext);
   const navigate = useNavigate();
+  const notificacionContex = useContext(NotificacionContext);
+
+  const { setNotificacion } = notificacionContex;
 
   const validar = Yup.object().shape({
     email: Yup.string()
@@ -24,12 +31,18 @@ const Login = () => {
       <div className="max-w-5xl  flex justify-center items-center ">
         <Formik
           initialValues={{
-            email: '',
-            password: '',
+            email: 'test@test.com',
+            password: '321321',
           }}
           validationSchema={validar}
-          onSubmit={(values) => {
-            navigate('/')
+          onSubmit={async (values) => {
+
+            const resp = await login(values.email, values.password)
+            if (!resp.ok) {
+              setNotificacion({ type: 1, message: resp.msg });
+            } else {
+              navigate('/')
+            }
           }}
         >
           {({ errors, touched }) => (
@@ -46,7 +59,7 @@ const Login = () => {
               <div className=" w-72 sm:w-80 relative">
                 <div
                   className="flex gap-x-1"><label htmlFor='password' className="text-color_green_6">Email</label>
-                  {errors.email && touched.email ? <div className="text-color_green_7">{errors.email}</div> : null}
+                  {errors.email && touched.email ? <div className="text-red-500">{errors.email}</div> : null}
                 </div>
                 <Field
                   autoComplete={"off"}
@@ -64,7 +77,7 @@ const Login = () => {
                 <div className="flex gap-x-1"><label
                   htmlFor='password' className="text-color_green_6">Contraseña</label>
                   {errors.password && touched.password ?
-                    <div className="text-color_green_7">
+                    <div className="text-red-500">
                       {errors.password}
                     </div> : null}
                 </div>

@@ -6,15 +6,8 @@ const Config = () => {
     <div className="w-10/12 pt-10">
 
       {/* create button logout */}
-      <button
-        className="bg-color_green_2 text-color_green_7 px-3 py-2 rounded-md text-base  w-full"
-        onClick={() => {
-          navigate('/auth/login')
-        }}
-      >
-        Cerrar sesión
-      </button>
 
+      <h1>soy el Config</h1>
     </div>
   );
 }

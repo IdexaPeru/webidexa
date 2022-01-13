@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Navigate, useRoutes } from 'react-router-dom';
 import Admin from '../pages/Admin';
 import Auth from '../pages/Auth';
@@ -62,18 +62,50 @@ import Trabajador from '../pages/Trabajadores/Trabajador';
 import Chat from '../pages/Trabajadores/Chat/Chat';
 import TrabajadorCall from '../pages/Trabajadores/TrabajadorCall';
 import TrabajadorInfo from '../pages/Trabajadores/TrabajadorInfo';
+import { useContext } from 'react/cjs/react.development';
+import { AuthContext } from '../context/auth/AuthContext';
+import PublicRoute from './PublicRoute';
 
 
 const RouterApp = () => {
   const rregistro = '/auth/registro/'
   const rrestore = '/auth/restore/'
   const rcliente = '/comprador/clientes/'
-  const rusuario = '/comprador/usuarios/'
+  const rusuario = '/comprador/usuarios/';
+
+  const { auth, verificarToken } = useContext(AuthContext);
+
+
+
+  let authRoutes = {
+    path: '/auth',
+    element: <Auth />,
+    children: [
+      { path: '/auth/login', element: <Login /> },
+      { path: '/auth/registro', element: <Navigate to={`${rregistro}datos-basicos`} /> },
+      {
+        path: '/auth/registro', element: <Registro />, children: [
+          { path: `${rregistro}datos-basicos`, element: <DatosBasicos /> },
+          { path: `${rregistro}datos-personales`, element: <DatosPersonales /> },
+          { path: `${rregistro}datos-contacto`, element: <DatosContacto /> },
+          { path: `${rregistro}finalizado`, element: <MensajeRegistro /> },
+        ]
+      },
+
+      { path: '/auth/restore', element: <Navigate to={`${rrestore}credenciales`} /> },
+      {
+        path: '/auth/restore', element: <Restore />, children: [
+          { path: `${rrestore}credenciales`, element: <RestoreInit /> },
+          { path: `${rrestore}finalizado`, element: <MensajeRestore /> },
+        ]
+      },
+    ]
+  }
 
   let routes = [
     {
       path: '/auth',
-      element: <Auth />,
+      element: <PublicRoute isAutenticated={auth.logged} />,
       children: [
         { path: '/auth/login', element: <Login /> },
         { path: '/auth/registro', element: <Navigate to={`${rregistro}datos-basicos`} /> },
@@ -95,10 +127,11 @@ const RouterApp = () => {
         },
       ]
     },
-    { path: '/', element: <Navigate to='/comprador/clientes' /> },
+
+    { path: '/', element: <Navigate to='/ventas/pedidos' /> },
 
     {
-      path: '/', element: <Admin />, children: [
+      path: '/', element: <Admin isAutenticated={auth.logged} />, children: [
         {
           path: '/comprador/search/:search', element: <ClienteSearch />,
         },
@@ -222,6 +255,17 @@ const RouterApp = () => {
   ];
 
   let element = useRoutes(routes)
+
+  useEffect(() => {
+    verificarToken();
+  }, [verificarToken]);
+
+  if (auth.checking) {
+    return <h1>cargando ....</h1>
+  }
+
+  // aca hay error
+
 
   return (
     <>

@@ -15,6 +15,10 @@ module.exports = {
 
         color_gray_1: '#494949',
         color_gray_2: '#000000',
+
+        red_primary: '#FF181F',
+        alert_primary: '#FF8400',
+        success_primary: '#00C851',
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif']

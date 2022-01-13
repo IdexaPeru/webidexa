@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Logo from '../../assets/img/logo.png';
 import { IconNotificacion, IconSearch } from '../Icons';
 import { PERFIL } from '../Images';
@@ -7,10 +8,10 @@ import NavbarMenu from '../Organismos/Navbar/NavbarMenu';
 const Navbar = () => {
   return (
     <div className=" font-poppins  justify-between border-b items-center pb-2 hidden sm:flex ">
-      <div className='flex items-center gap-x-3'>
+      <Link to='/' className='flex items-center gap-x-3'>
         <div><img src={Logo} className='w-14 h-14' /></div>
         <h1 className='text-lg font-extrabold tracking-tight text-color_green_7 hidden  md:flex'> CARLOS</h1>
-      </div>
+      </Link>
       <div className='relative flex items-center'>
         <span className='absolute left-4 text-color_green_7 '><IconSearch /></span>
         <input

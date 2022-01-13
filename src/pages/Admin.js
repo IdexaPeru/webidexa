@@ -1,10 +1,10 @@
-import { Outlet, useLocation, } from "react-router-dom"
+import { Navigate, Outlet, useLocation, } from "react-router-dom"
 import SidebarMovil from "../components/Organismos/Sidebar/SidebarMovil";
 import Navbar from "../components/Plantillas/Navbar";
 import SidebarWeb from "../components/Plantillas/SidebarWeb";
 
 
-const Admin = () => {
+const Admin = ({ isAutenticated }) => {
   const location = useLocation()
 
   const { pathname } = location;
@@ -18,27 +18,33 @@ const Admin = () => {
   // bg-color_green_1 h-full flex  items-center flex-col md:flex-row relative
   return (
     <>
-      <div className=" flex  max-w-6xl mx-auto bg-color_green_1 flex-col px-3 sm:px-5 md:px-10  pt-2">
+      {
+        isAutenticated
+          ? <div className=" flex  max-w-6xl mx-auto bg-color_green_1 flex-col px-3 sm:px-5 md:px-10  pt-2">
 
-        <Navbar />
-        <div className="flex">
-          {
-            filterRutes.length !== 1 &&
-            <SidebarMovil />
-          }
-          {
-            filterRutes.length !== 1 &&
-            <SidebarWeb />
-          }
+            <Navbar />
+            <div className="flex">
+              {
+                filterRutes.length !== 1 &&
+                <SidebarMovil />
+              }
+              {
+                filterRutes.length !== 1 &&
+                <SidebarWeb />
+              }
 
-          <div className="md:px-5 w-full ">
+              <div className="md:px-5 w-full ">
 
-            <Outlet />
+                <Outlet />
+              </div>
+            </div>
+
+
           </div>
-        </div>
+          : <Navigate to="/auth/login" />
+      }
 
 
-      </div>
 
     </>
   );
