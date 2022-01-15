@@ -2,7 +2,9 @@ import { Navigate, Outlet, useLocation, } from "react-router-dom"
 import SidebarMovil from "../components/Organismos/Sidebar/SidebarMovil";
 import Navbar from "../components/Plantillas/Navbar";
 import SidebarWeb from "../components/Plantillas/SidebarWeb";
-
+import moment from "moment";
+import 'moment/locale/es';
+moment.locale('es');
 
 const Admin = ({ isAutenticated }) => {
   const location = useLocation()
@@ -10,7 +12,6 @@ const Admin = ({ isAutenticated }) => {
   const { pathname } = location;
 
   const currentPath = pathname.split('/');
-  console.log(currentPath);
   const rutas = ['nuevo-credito', 'search', 'nuevo-abono'];
 
   var filterRutes = rutas.filter((tag) => (currentPath.includes(tag) && tag));

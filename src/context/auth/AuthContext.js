@@ -1,5 +1,7 @@
-import { createContext, useState, useCallback } from 'react';
+import { createContext, useState, useCallback, useContext } from 'react';
 import { fetchConToken, fetchSinToken } from '../../helpers/fetch';
+import { chatTypes } from '../../types/chatTypes';
+import { ChatContext } from '../chat/ChatContext';
 
 export const AuthContext = createContext(null);
 
@@ -13,11 +15,11 @@ const initialState = {
 
 export const AuthProvider = ({ children }) => {
   const [auth, setAuth] = useState(initialState);
+  const { dispatch } = useContext(ChatContext)
+
 
   const login = async (email, password) => {
-    console.log('login');
     const resp = await fetchSinToken('login', { email, password }, 'POST');
-    console.log(resp);
 
     if (resp.ok) {
       localStorage.setItem('token', resp.token);
@@ -40,7 +42,6 @@ export const AuthProvider = ({ children }) => {
   }
 
   const verificarToken = useCallback(async () => {
-    console.log('verificar');
     const token = localStorage.getItem('token') || '';
 
     // si token no existe
@@ -60,9 +61,6 @@ export const AuthProvider = ({ children }) => {
     if (resp.ok) {
       localStorage.setItem('token', resp.token);
       const { usuario } = resp;
-      console.log('soy resp');
-      console.log(usuario);
-      console.log('soy resp');
 
       setAuth({
         uid: usuario.uid,
@@ -71,10 +69,8 @@ export const AuthProvider = ({ children }) => {
         name: usuario.nombre,
         email: usuario.email
       });
-      console.log('autenticado ');
       return true
     } else {
-      console.log('cancelar estados');
       setAuth({
         uid: null,
         checking: false,
@@ -89,13 +85,18 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     localStorage.removeItem('token');
+
+    dispatch({ type: chatTypes.LIMPIAR_MENSAJES })
+
+
     setAuth({
       uid: null,
       checking: false,
       logged: false,
       name: null,
       email: null,
-    })
+    });
+
   }
 
   return (

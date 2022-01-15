@@ -1,23 +1,28 @@
 import { useContext } from "react";
 import { Link, } from "react-router-dom";
 import { AuthContext } from "../../../context/auth/AuthContext";
-import { ChatContext } from "../../../context/chat/ChatContext";
+import { useOpenChat } from "../../../hooks/useOpenChat";
 import { PERFIL2, } from "../../Images";
 
 const Colegas = () => {
 
-  const { chatState } = useContext(ChatContext);
+
   const { auth } = useContext(AuthContext);
+
+  const [chatState, abrirChat] = useOpenChat();
+
 
 
   return (
     <div className=" pb-2 pt-3 font-poppins  flex flex-col border-b border-color_green_4 ">
       <p className="text-color_green_5  text-sm">Colegas</p>
-      {auth.name}
+      {/* {auth.name} */}
       <div className="flex flex-col gap-y-4 py-4 text-sm">
 
         {
-          chatState.usuarios.filter(usuario => usuario.uid !== auth.uid).map(usuario => (<Link key={usuario.uid} to={`/trabajadores/${usuario.uid}/chat`} className="flex justify-between items-center">
+          chatState.usuarios.filter(usuario => usuario.uid !== auth.uid).map(usuario => (<Link
+            onClick={() => abrirChat(usuario.uid)}
+            key={usuario.uid} to={`/trabajadores/${usuario.uid}/chat`} className="flex justify-between items-center">
             <div className="flex gap-x-3 items-center ">
               <img src={PERFIL2} className="w-10 rounded-full h-10 object-cover " />
               <div>

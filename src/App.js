@@ -24,16 +24,16 @@ function App() {
   return (
     <div className=' h-screen'>
       <NotificacionState>
-        <AuthProvider>
-          <ChatProvider>
+        <ChatProvider>
+          <AuthProvider>
             <SocketProvider>
               <Router>
                 <RouterApp />
               </Router>
               <Notificaciones />
             </SocketProvider>
-          </ChatProvider>
-        </AuthProvider>
+          </AuthProvider>
+        </ChatProvider>
       </NotificacionState>
 
     </div>

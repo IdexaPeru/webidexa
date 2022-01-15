@@ -11,7 +11,6 @@ const NotificacionState = props => {
   const [state, dispatch] = useReducer(notificacionReducer, InitialState);
 
   const setNotificacion = (props) => {
-    console.log('estoy en set notification');
     const finditem = state.notificaciones.find(v => v.message === props.message);
     if (finditem) removeNotificacion(finditem.id);
     return dispatch({

@@ -4,7 +4,6 @@ import { ADD_NOTIFICATION, REMOVE_NOTIFICATION } from "../../types/notificacionT
 const notificacionReducer = (state, action) => {
   switch (action.type) {
     case ADD_NOTIFICATION:
-      console.log('ad notificacion');
       return {
         ...state,
         notificaciones: [...state.notificaciones, action.payload],

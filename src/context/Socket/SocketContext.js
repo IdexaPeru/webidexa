@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect } from "react";
+import { scrollBottomAnimated } from "../../helpers/scrollToBottom";
 import { useSocket } from "../../hooks/useSocket";
 import { chatTypes } from "../../types/chatTypes";
 import { AuthContext } from "../auth/AuthContext";
@@ -42,6 +43,19 @@ export const SocketProvider = ({ children }) => {
       })
     })
   }, [socket, dispatch]);
+
+  useEffect(() => {
+
+    socket?.on('mensaje-personal', (mensaje) => {
+      dispatch({
+        type: chatTypes.NUEVO_MENSAJE,
+        payload: mensaje
+      })
+
+      scrollBottomAnimated('mensajes')
+
+    })
+  }, [socket, dispatch])
 
 
   return (
