@@ -1,24 +1,24 @@
 import { useContext } from "react";
-import { NavLink, Outlet, useLocation, useParams, } from "react-router-dom"
+import { NavLink, Outlet, useParams, } from "react-router-dom"
 import { useEffect } from "react/cjs/react.development";
 import { IconCall, IconInfo, IconMessaje } from "../../components/Icons";
 import { PERFIL12 } from "../../components/Images";
 import { AuthContext } from "../../context/auth/AuthContext";
-import { ChatContext } from "../../context/chat/ChatContext";
 import { useOpenChat } from "../../hooks/useOpenChat";
-import { chatTypes } from "../../types/chatTypes";
 import './Trabajador.css';
 
 const Trabajador = () => {
 
   // const { chatState, dispatch } = useContext(ChatContext);
-  const [chatState, abrirChat] = useOpenChat();
   const { auth } = useContext(AuthContext);
+  // falta abrir chat si reacarga la pagina
+  const [chatState, abrirChat] = useOpenChat();
 
   const params = useParams();
 
-  // falta abrir chat si reacarga la pagina
-
+  useEffect(() => {
+    abrirChat(params.trabajadorID);
+  }, [])
 
   return (
     <>
@@ -37,17 +37,18 @@ const Trabajador = () => {
             <div className="flex gap-x-3 md:gap-x-7 bg-color_green_1 py-4">
 
               <NavLink
-                to='/trabajadores/15/call'
+                to={`/trabajadores/${params.trabajadorID}/call`}
                 className={({ isActive }) => (`cursor-pointer ${isActive ? 'text-color_green_7' : 'text-color_gray_1'}`)}
               ><IconCall /></NavLink>
 
               <NavLink
-                to='/trabajadores/15/chat'
+                onClick={() => abrirChat(params.trabajadorID)}
+                to={`/trabajadores/${params.trabajadorID}/chat`}
                 className={({ isActive }) => (`cursor-pointer ${isActive ? 'text-color_green_7' : 'text-color_gray_1'}`)}
               ><IconMessaje /></NavLink>
 
               <NavLink
-                to='/trabajadores/15/info'
+                to={`/trabajadores/${params.trabajadorID}/info`}
                 className={({ isActive }) => (`cursor-pointer ${isActive ? 'text-color_green_7' : 'text-color_gray_1'}`)}
               ><IconInfo /></NavLink>
 
