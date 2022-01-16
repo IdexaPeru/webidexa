@@ -4,8 +4,9 @@ import { chatReducer } from './chatReducer';
 export const ChatContext = createContext(null);
 
 const initialState = {
-  uid: '',
+  // uid: '',
   chatActivo: null, // UID del usuario al que yo quiero enviar mensajes
+  userSelected: null,
   usuarios: [], // Todos los usuarios de la base datos
   mensajes: [], // El chat seleccionado
 }

@@ -9,11 +9,11 @@ import './Trabajador.css';
 
 const Trabajador = () => {
 
-  // const { chatState, dispatch } = useContext(ChatContext);
   const { auth } = useContext(AuthContext);
   // falta abrir chat si reacarga la pagina
   const [chatState, abrirChat] = useOpenChat();
 
+  const { userSelected } = chatState;
   const params = useParams();
 
   useEffect(() => {
@@ -26,11 +26,11 @@ const Trabajador = () => {
         <div className="border-b pb-2 sm:pb-7 border-color_green_4">
           <div className="flex items-center justify-between">
             <div className="flex gap-x-5 sm:gap-x-10">
-              <img className="img_perfil_trabajador w-12 h-12 sm:w-16 sm:h-16 object-cover hidden sm:flex " src={PERFIL12} />
-              <img className="rounded-full w-14 h-14 sm:w-16 sm:h-16 object-cover  sm:hidden  " src={PERFIL12} />
+              <img className="img_perfil_trabajador w-12 h-12 sm:w-16 sm:h-16 object-cover hidden sm:flex " src={userSelected?.img} />
+              <img className="rounded-full w-14 h-14 sm:w-16 sm:h-16 object-cover  sm:hidden  " src={userSelected?.img} />
               <div className="flex flex-col justify-center ">
-                <p className="text-2xl  font-poppins font-bold text-color_gray_1 truncate">USER </p>
-                <p className="hidden sm:flex text-gray-600 truncate">{auth.name}</p>
+                <p className="text-2xl  font-poppins font-bold text-color_gray_1 truncate uppercase">{userSelected?.apodo} </p>
+                <p className="hidden sm:flex text-gray-600 truncate capitalize">{userSelected?.nombres} {userSelected?.apellidos}</p>
               </div>
             </div>
 

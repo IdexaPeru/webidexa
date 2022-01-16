@@ -71,7 +71,7 @@ const NavChat = () => {
       />
 
       <button
-        onClick={() => console.log(mensaje)}
+        onClick={enviarMensaje}
         className={`w-1/12 flex justify-center  ${mensaje.length >= 1 ? 'text-color_green_7 ' : 'text-color_gray_1'}`}>
         <IconSend />
       </button>

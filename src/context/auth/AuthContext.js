@@ -9,8 +9,9 @@ const initialState = {
   uid: null,
   checking: true,
   logged: false,
-  name: null,
-  email: null,
+  user: null,
+  // name: null,
+  // email: null,
 }
 
 export const AuthProvider = ({ children }) => {
@@ -19,7 +20,7 @@ export const AuthProvider = ({ children }) => {
 
 
   const login = async (email, password) => {
-    const resp = await fetchSinToken('login', { email, password }, 'POST');
+    const resp = await fetchSinToken('login/worker', { email, password }, 'POST');
 
     if (resp.ok) {
       localStorage.setItem('token', resp.token);
@@ -29,8 +30,7 @@ export const AuthProvider = ({ children }) => {
         uid: usuario.uid,
         checking: false,
         logged: true,
-        name: usuario.nombre,
-        email: usuario.email,
+        user: usuario
       })
     }
 
@@ -50,8 +50,7 @@ export const AuthProvider = ({ children }) => {
         uid: null,
         checking: false,
         logged: false,
-        name: null,
-        email: null,
+        user: null
       })
 
       return false
@@ -66,8 +65,7 @@ export const AuthProvider = ({ children }) => {
         uid: usuario.uid,
         checking: false,
         logged: true,
-        name: usuario.nombre,
-        email: usuario.email
+        user: usuario
       });
       return true
     } else {
@@ -75,8 +73,7 @@ export const AuthProvider = ({ children }) => {
         uid: null,
         checking: false,
         logged: false,
-        name: null,
-        email: null,
+        user: null
       })
       return false
     }
@@ -93,8 +90,7 @@ export const AuthProvider = ({ children }) => {
       uid: null,
       checking: false,
       logged: false,
-      name: null,
-      email: null,
+      user: null
     });
 
   }

@@ -14,6 +14,7 @@ export const chatReducer = (state, action) => {
         ...state,
         chatActivo: action.payload,
         mensajes: [],
+        userSelected: state.usuarios.find(e => e.uid === action.payload)
       }
     case chatTypes.NUEVO_MENSAJE:
       if (state.chatActivo === action.payload.de ||
@@ -31,7 +32,7 @@ export const chatReducer = (state, action) => {
       }
     case chatTypes.LIMPIAR_MENSAJES:
       return {
-        uid: '',
+        // uid: '',
         chatActivo: null,
         usuarios: [],
         mensajes: []

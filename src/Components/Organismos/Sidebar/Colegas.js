@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { Link, } from "react-router-dom";
 import { AuthContext } from "../../../context/auth/AuthContext";
 import { useOpenChat } from "../../../hooks/useOpenChat";
-import { PERFIL2, } from "../../Images";
 
 const Colegas = () => {
 
@@ -10,7 +9,6 @@ const Colegas = () => {
   const { auth } = useContext(AuthContext);
 
   const [chatState, abrirChat] = useOpenChat();
-
 
 
   return (
@@ -24,10 +22,15 @@ const Colegas = () => {
             onClick={() => abrirChat(usuario.uid)}
             key={usuario.uid} to={`/trabajadores/${usuario.uid}/chat`} className="flex justify-between items-center">
             <div className="flex gap-x-3 items-center ">
-              <img src={PERFIL2} className="w-10 rounded-full h-10 object-cover " />
+              {console.log(usuario.roles.find(e => e.name === 'ADMIN'))}
+              <img src={usuario.img} className="w-10 rounded-full h-10 object-cover " />
               <div>
-                <p className="text-color_gray_1 font-semibold truncate w-32">{usuario.nombre}</p>
-                <p className="text-xs text-color_green_5 font-light">Administrador</p>
+                <p className="text-color_gray_1 font-semibold truncate w-32">{usuario.apodo}</p>
+                <p className="text-xs text-color_green_5 font-light">{
+                  usuario.roles.find(e => e.name === 'ADMIN')?.name === 'ADMIN'
+                    ? 'ADMINISTRADOR'
+                    : usuario.roles[0].name}
+                </p>
               </div>
             </div>
             {

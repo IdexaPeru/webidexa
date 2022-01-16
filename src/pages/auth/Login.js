@@ -31,8 +31,8 @@ const Login = () => {
       <div className="max-w-5xl  flex justify-center items-center ">
         <Formik
           initialValues={{
-            email: 'test@test.com',
-            password: '321321',
+            email: 'yelsin@gmail.com',
+            password: '123456',
           }}
           validationSchema={validar}
           onSubmit={async (values) => {
